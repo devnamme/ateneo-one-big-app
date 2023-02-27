@@ -14,8 +14,8 @@ const Card = () => {
   }
 
   return (
-    <div className='card' style={{ height: height}} onClick={toggle}>
-      <div className='card-header'>
+    <div className='card' style={{ height: height}}>
+      <div className='card-header' onClick={toggle}>
         <div className='card-label'>
           <h4 className='label'>CSCI 42</h4>
         </div>
@@ -29,7 +29,18 @@ const Card = () => {
       {isToggled && (
         <div className='card-content'>
           <div className='color-container'>
-
+            <div id='lavender'>
+            </div>
+            <div id='blue'>
+            </div>
+            <div id='red'>
+            </div>
+            <div id='yellow'>
+            </div>
+            <div id='green'>
+            </div>
+            <div id='pink'>
+            </div>
           </div>
           <div className='card-info'>
           </div>
