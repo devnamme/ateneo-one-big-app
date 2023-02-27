@@ -55,7 +55,7 @@
 }
 
 .card-content {
-    height: 282px; /* Adjust as needed */
+    height: 282px; 
     padding: 20px;
 }
 
@@ -167,3 +167,15 @@
     background-color: black;
     border-radius: 0px 0px 4px 4px;
 }
+
+.content-text{
+    margin-top: 16px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.heavy{
+    font-weight: 700;
+}
+
+

@@ -3,8 +3,9 @@ import './Card.css';
 import edit_img from './img/material-symbols_edit-outline.png';
 import del_img from './img/uil_trash-alt.png';
 import check from './img/check.png';
+import Timeslot from './Timeslot';
 
-const Card = () => {
+const Card = (props) => {
   const [isToggled, setIsToggled] = useState(false);
   const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
   const [height, setHeight] = useState("80px");
@@ -23,7 +24,7 @@ const Card = () => {
     <div className='card' style={{ height: height}}>
       <div className='card-header' onClick={toggle}>
         <div className='card-label'>
-          <h4 className='label'>CSCI 42</h4>
+          <h4 className='label'>{props.name}</h4>
         </div>
         <div className={imageDiv}>
           <img id='delete' src={del_img} alt='material-symbols_edit-outline' />
@@ -74,6 +75,9 @@ const Card = () => {
           )}
           </div>
           <div className='card-info'>
+            <p className='content-text'><span className='heavy'>Professor: </span>{props.profName}</p>
+            <p className='heavy content-text'>Timeslots</p>
+            <Timeslot />
           </div>
           <div className='btns'>
           </div> 
