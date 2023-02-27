@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import './Card.css';
 import edit_img from './img/material-symbols_edit-outline.png';
 import del_img from './img/uil_trash-alt.png';
+import check from './img/check.png';
 
 const Card = () => {
   const [isToggled, setIsToggled] = useState(false);
   const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
   const [height, setHeight] = useState("80px");
+  const [selectedColor, setSelectedColor] = useState(null);
+
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
+  };
   
   const toggle = () => {
     setIsToggled(!isToggled);
@@ -29,18 +35,43 @@ const Card = () => {
       {isToggled && (
         <div className='card-content'>
           <div className='color-container'>
-            <div id='lavender'>
+            <div
+              id='lavender'
+              className={selectedColor === 'lavender' ? 'selected' : ''}
+              onClick={() => handleColorClick('lavender')}
+            />
+            <div
+              id='blue'
+              className={selectedColor === 'blue' ? 'selected' : ''}
+              onClick={() => handleColorClick('blue')}
+            />
+            <div
+              id='red'
+              className={selectedColor === 'red' ? 'selected' : ''}
+              onClick={() => handleColorClick('red')}
+            />
+            <div
+              id='yellow'
+              className={selectedColor === 'yellow' ? 'selected' : ''}
+              onClick={() => handleColorClick('yellow')}
+            />
+            <div
+              id='green'
+              className={selectedColor === 'green' ? 'selected' : ''}
+              onClick={() => handleColorClick('green')}
+            />
+            <div
+              id='pink'
+              className={selectedColor === 'pink' ? 'selected' : ''}
+              onClick={() => handleColorClick('pink')}
+            />
+           {selectedColor && (
+            <div className='selection' style={{bottom: `${document.getElementById(selectedColor).offsetTop}px`, left: `${document.getElementById(selectedColor).offsetLeft}px`}}>
+              <div className='black-rectangle'>
+                <img id="check" src={check} alt="check" />
+              </div>
             </div>
-            <div id='blue'>
-            </div>
-            <div id='red'>
-            </div>
-            <div id='yellow'>
-            </div>
-            <div id='green'>
-            </div>
-            <div id='pink'>
-            </div>
+          )}
           </div>
           <div className='card-info'>
           </div>

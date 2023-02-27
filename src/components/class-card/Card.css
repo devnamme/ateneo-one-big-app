@@ -59,87 +59,111 @@
     padding: 20px;
 }
 
-#lavender{
+#lavender {
     width: 48px;
     height: 48px;
 
     /* Accents/Lavender */
 
-    background: #ACC1FF;
+    background: #acc1ff;
     /* Black */
 
     border: 2px solid #000000;
     border-radius: 4px;
 }
 
-#blue{
+#blue {
     width: 48px;
     height: 48px;
 
     /* Accents/Sky Blue */
 
-    background: #C7EEFF;
+    background: #c7eeff;
     /* Black */
 
     border: 2px solid #000000;
     border-radius: 4px;
-
 }
 
-#red{
+#red {
     width: 48px;
     height: 48px;
 
     /* Accents/Red */
 
-    background: #FFAEAE;
+    background: #ffaeae;
     /* Black */
 
     border: 2px solid #000000;
     border-radius: 4px;
 }
 
-#yellow{
+#yellow {
     width: 48px;
     height: 48px;
-    
+
     /* Accents/Yellow */
-    
-    background: #FFEC94;
+
+    background: #ffec94;
     /* Black */
-    
+
     border: 2px solid #000000;
     border-radius: 4px;
 }
 
-#green{
+#green {
     width: 48px;
     height: 48px;
-    
+
     /* Accents/Green */
-    
-    background: #B0E57C;
+
+    background: #b0e57c;
     /* Black */
-    
+
     border: 2px solid #000000;
     border-radius: 4px;
 }
 
-#pink{
+#pink {
     width: 48px;
     height: 48px;
-    
+
     /* Accents/Pink */
-    
-    background: #FFDBDB;
+
+    background: #ffdbdb;
     /* Black */
-    
+
     border: 2px solid #000000;
     border-radius: 4px;
 }
 
-.color-container{
+.color-container {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    justify-content: space-around;
+    position: relative;
+}
+
+.selected {
+    border: 2px solid black;
+}
+
+.selection {
+    position: absolute;
+}
+
+
+#check{
+    margin-bottom: 4px;
+    margin-left: 18px;
+}
+  
+.black-rectangle {
+    position: absolute;
+    bottom: 0;
+    width: 48px;
+    height: 16px;
+    background-color: black;
+    border-radius: 0px 0px 4px 4px;
 }
