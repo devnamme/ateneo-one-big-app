@@ -32,9 +32,11 @@ function Header() {
         <div className="dropdown">
             <button>Shortcuts</button>
             <div className="dropdown-content">
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
+                <a href="https://www.ateneo.edu/">Ateneo Website</a>
+                <a href="https://aisis.ateneo.edu/">AISIS</a>
+                <a href="https://canvas.ateneo.edu/">Canvas</a>
+                <a href="https://sites.google.com/ateneo.edu/ls-one">LS One</a>
+                <a href="https://docs.google.com/spreadsheets/d/1phI0exizODI4pnONwIWaGM8o5paq3aWUW_NbZhNcnzM/edit?usp=sharing">LS Directory</a>
             </div>
         </div>
         <Link to = 'about'>

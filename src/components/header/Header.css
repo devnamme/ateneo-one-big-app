@@ -84,8 +84,15 @@ header {
   border-width: 6px 6px 0 6px;
   border-color: #000 transparent transparent transparent;
   transform: translateY(-50%);
+  transition-duration: 0.2s;
 }
 
+.dropdown:hover::after {
+  rotate: 180deg;
+  top: 23%;
+  transition-duration: 0.2s;
+  
+}
 .dropdown-content {
     display: none;
     position: absolute;
