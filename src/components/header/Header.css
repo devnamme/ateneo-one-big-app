@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
 
 header {
@@ -48,17 +47,21 @@ header {
 }
 
 .button-container button {
-    margin-right: 64px;
+    margin-left: 32px;
+    margin-right: 32px;
     border: none;
     background-color: #ffffff;
     color: #080606;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
     cursor: pointer;
 }
 
-.button-container > a:last-child {
+.button-container button.last-button {
     margin-right: 0px;
+    padding-right: 0px;
 }
 
 .button-container .dropdown {
@@ -73,7 +76,7 @@ header {
   content: "";
   position: absolute;
   top: 52%;
-  left: 57%;
+  left: 85%;
   right: 5px;
   width: 0;
   height: 0;
@@ -88,12 +91,14 @@ header {
     position: absolute;
     z-index: 1;
     top: 100%;
-    left: 34%;
+    left: 55%;
     transform: translateX(-50%);
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 
 .dropdown-content a {
@@ -112,7 +117,6 @@ header {
 .dropdown-content a:hover {
     background-color: #ccc;
 }
-  
   
 .profile-container {
     position: relative;

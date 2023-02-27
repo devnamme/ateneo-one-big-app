@@ -38,7 +38,7 @@ function Header() {
             </div>
         </div>
         <Link to = 'about'>
-            <button>About</button>
+            <button className="lastbutton">About</button>
         </Link>
         <div className="profile-container">
             <img src="/profile.svg" alt="Profile" />
