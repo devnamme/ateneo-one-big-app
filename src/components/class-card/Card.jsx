@@ -5,25 +5,36 @@ import del_img from './img/uil_trash-alt.png';
 
 const Card = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
+  const [height, setHeight] = useState("80px");
   
-  const toggle = () => {{
+  const toggle = () => {
     setIsToggled(!isToggled);
-  }}
+    setHeight(isToggled ? "80px" : "362px");
+  }
 
   return (
-    <div className='card'>
+    <div className='card' style={{ height: height}} onClick={toggle}>
       <div className='card-header'>
-        <div className='card-label' onClick={toggle}>
+        <div className='card-label'>
           <h4 className='label'>CSCI 42</h4>
         </div>
-        <div className='card-images'>
+        <div className={imageDiv}>
           <img id='delete' src={del_img} alt='material-symbols_edit-outline' />
+        </div>
+        <div className='card-image'>
           <img id='edit' src={edit_img} alt='material-symbols_edit-outline' />
         </div>
       </div>
       {isToggled && (
         <div className='card-content'>
-          Test
+          <div className='color-container'>
+
+          </div>
+          <div className='card-info'>
+          </div>
+          <div className='btns'>
+          </div> 
         </div>   
       )}
     </div>
