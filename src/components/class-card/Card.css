@@ -1,0 +1,63 @@
+/* Property 1=default */
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+.card{
+    width: 400px;
+    height: 80px;
+    background: white;
+
+    /* Drop Shadow */
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.label{
+    position: relative;
+    width: 84px;
+    height: 32px;
+    left: 24px;
+    top: calc(50% - 32px/2);
+
+    /* Desktop/H4/Bold */
+    font-family: 'Viga', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    white-space: nowrap;
+
+    /* Black */
+    color: #000000;
+
+}
+
+.card-header{
+    display: flex;
+
+}
+.card-label{
+    width: 360px;
+}
+
+#edit{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    right: 24px;
+    top: calc(50% - 32px/2);
+}
+
+
+#delete{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    right: 32px;
+    top: calc(50% - 32px/2);
+    display: none;
+}
