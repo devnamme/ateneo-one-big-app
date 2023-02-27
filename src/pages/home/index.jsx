@@ -1,8 +1,12 @@
 import './Home.css'
+import Header from '../../components/header/index';
 
 function HomePage() {
   return (
-    <h1>Home Page</h1>
+    <>
+      <Header />
+      <h1>Home Page</h1>
+    </>
   )
 }
 
