@@ -24,9 +24,13 @@ header {
 }
   
 .logo-container h1 {
-    font-family: 'Viga', sans-serif;
+    font-family: 'Viga';
+    font-style: normal;
     font-size: 32px;
-    font-weight: 100;
+    font-weight: 400;
+    line-height: 43px;
+    width: 189px;
+    height: 43px;
     text-decoration: none;
     margin: 0;
 }
@@ -53,12 +57,12 @@ header {
     cursor: pointer;
 }
 
-.button-container .dropdown {
-    margin-right: 15px;
-}
-
 .button-container > a:last-child {
     margin-right: 0px;
+}
+
+.button-container .dropdown {
+    margin-right: 15px;
 }
 
 .dropdown {
