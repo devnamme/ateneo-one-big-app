@@ -77,9 +77,11 @@ const Card = (props) => {
           <div className='card-info'>
             <p className='content-text'><span className='heavy'>Professor: </span>{props.profName}</p>
             <p className='heavy content-text'>Timeslots</p>
-            <Timeslot />
+            <Timeslot day='MON' time='2:00 PM to 3:30 PM' room='CTC-212'/>
+            <Timeslot day='TUE' time='11:00 AM to 12:30 PM' room='F-204'/>
           </div>
           <div className='btns'>
+            
           </div> 
         </div>   
       )}

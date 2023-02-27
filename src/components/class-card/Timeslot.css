@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: row;
     color: black;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 4px;
 }
 
 #del{
@@ -17,9 +20,9 @@
 
 #room{
     position: absolute;
-    width: 41px;
+    width: 65px;
     height: 22px;
-    left: 259px;
+    left: 240px;
     top: 1px;
 }
 
