@@ -1,0 +1,40 @@
+.timeslot{
+    width: 352px;
+    height: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+#del{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 328px;
+    bottom: 2px;
+}
+
+#room{
+    position: absolute;
+    width: 41px;
+    height: 22px;
+    left: 259px;
+    top: 1px;
+}
+
+#time{
+    position: absolute;
+    width: 163px;
+    height: 22px;
+    left: 62px;
+    top: 1px;
+}
+
+#day{
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    left: 5px;
+    top: 1px;
+}

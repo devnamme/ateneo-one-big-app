@@ -35,7 +35,7 @@ import Card from './components/class-card/Card'
 function App() {
   return (
     // <RouterProvider router={router} />
-    <Card />
+    <Card name="CSCI 42" profName="JEFFREY J. JONGKO" />
     
   )
 }
