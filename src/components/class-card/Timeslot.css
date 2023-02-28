@@ -10,6 +10,10 @@
     margin-bottom: 4px;
 }
 
+.timeslot p{
+    font-family: 'Open Sans', sans-serif;
+}
+
 #del{
     position: absolute;
     width: 24px;
