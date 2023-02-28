@@ -137,6 +137,10 @@
     border-radius: 4px;
 }
 
+.card-info p{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .color-container {
     display: flex;
     flex-direction: row;
