@@ -4,6 +4,7 @@ import edit_img from './img/material-symbols_edit-outline.png';
 import del_img from './img/uil_trash-alt.png';
 import check from './img/check.png';
 import Timeslot from './Timeslot';
+import Button from '../../components/button/Button'
 
 const Card = (props) => {
   const [isToggled, setIsToggled] = useState(false);
@@ -22,8 +23,8 @@ const Card = (props) => {
 
   return (
     <div className='card' style={{ height: height}}>
-      <div className='card-header' onClick={toggle}>
-        <div className='card-label'>
+      <div className='card-header'>
+        <div className='card-label' onClick={toggle}>
           <h4 className='label'>{props.name}</h4>
         </div>
         <div className={imageDiv}>
@@ -81,7 +82,7 @@ const Card = (props) => {
             <Timeslot day='TUE' time='11:00 AM to 12:30 PM' room='F-204'/>
           </div>
           <div className='btns'>
-            
+            <Button text='Cancel' isFilled={true} size="regular" />
           </div> 
         </div>   
       )}
