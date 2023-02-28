@@ -1,8 +1,19 @@
 import './NotificationCard.css'
+import closeIcon from './../../assets/close.svg'
+import { useState } from 'react'
 
-function NotificationCard() {
+function NotificationCard(props) {
+  const [active, setActive] = useState(true)
+
+  function close() {
+    setActive(false)
+  }
+
   return (
-    <h2>This is a notification</h2>
+    <div className={active ? "notification-card active" : "notification-card"}>
+      <p className="text">{props.text}</p>
+      <img src={closeIcon} className="close" onClick={close} />
+    </div>
   )
 }
 

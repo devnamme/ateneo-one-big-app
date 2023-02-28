@@ -1,0 +1,35 @@
+.notification-card {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;
+  width: 350px;
+  padding: 16px 24px;
+  background-color: white;
+  border-radius: 8px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  position: fixed;
+  bottom: 24px;
+  left: 32px;
+  transform: translate(0, 200%);
+
+  transition: 0.3s;
+}
+
+.notification-card.active {
+  transform: translate(0, 0);
+}
+
+.notification-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.notification-card img {
+  cursor: pointer;
+}
