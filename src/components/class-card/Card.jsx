@@ -82,7 +82,8 @@ const Card = (props) => {
             <Timeslot day='TUE' time='11:00 AM to 12:30 PM' room='F-204'/>
           </div>
           <div className='btns'>
-            <Button text='Cancel' isFilled={true} size="regular" />
+            <Button text='Add Timeslot' isFilled={false} size="regular" color="#0084F7" />
+            <Button text='Paste from AISIS' isFilled={false} size="regular" color="#0084F7" />
           </div> 
         </div>   
       )}
