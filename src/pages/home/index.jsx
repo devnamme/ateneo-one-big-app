@@ -1,9 +1,8 @@
 import './Home.css'
-import Button from '../../components/button/Button'
 
 function HomePage() {
   return (
-    <Button text="Login" isFilled={false} size="regular" />
+    <h1>Home Page</h1>
   )
 }
 
