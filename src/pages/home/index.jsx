@@ -1,8 +1,9 @@
 import './Home.css'
+import Card from '../../components/class-card/Card'
 
 function HomePage() {
   return (
-    <h1>Home Page</h1>
+    <Card name="CSCI 42" profName="JEFFREY J. JONGKO" />
   )
 }
 
