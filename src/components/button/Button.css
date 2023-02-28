@@ -1,0 +1,37 @@
+.button {
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+  
+.filled {
+    background: #0084F7;
+    border: none;
+    color: white;
+  }
+  
+.hollow {
+    border: 1px solid #0084F7;
+    color: #0084F7;
+  }
+  
+.regular {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+}
+  
+.large {
+    width: 300px;
+    height: 64px;
+    font-size: 18px;
+}
+
+.hollow.large {
+    border-width: 2px;
+}
+
+
