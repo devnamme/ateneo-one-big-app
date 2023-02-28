@@ -11,3 +11,13 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

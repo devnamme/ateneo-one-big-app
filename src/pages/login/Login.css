@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open Sans&display=swap');
+
+#login{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-image: url("../../assets/login/background.png");
+    background-size: cover;
+}
+#login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#login-contents{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#login-contents h2{
+    /* One Big App */
+    margin: 0 0 61px 0;
+    /* Desktop/H2/Bold */
+    font-family: 'Viga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    /* identical to box height */
+    /* Black */
+    color: #000000;
+}
+
+#login-contents p{
+    margin: 8px 0 8px 0;
+    /* Desktop/Body/Normal/Regular */
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    /* Black */
+    color: #000000;
+    text-align: center;
+}
+
+#login button{
+    margin: 69px 0 0 0;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+
+    width: 300px;
+    height: 63px;
+
+    background: url("../../assets/login/google signin.png");
+}
