@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+button {
+    border-radius: 0.75em;
+    border: 0;
+    padding: 0.75em 1em;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+button:hover {
+    color: gray;
+}
+
+button:hover .icon {
+    filter: invert(56%) sepia(0%) saturate(1058%) hue-rotate(174deg) brightness(89%) contrast(90%);
+}
+
+.icon {
+    height: 10%;
+    width: 10%;
+
+}
+
