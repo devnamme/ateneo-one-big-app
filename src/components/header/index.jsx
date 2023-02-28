@@ -24,7 +24,7 @@ function Header() {
                 </Link>
                 <div className="dropdown-content">
                     <a href="schedule/enlistment">Enlistment</a>
-                    <a href="schedule/:id">My Schedule</a>
+                    <a href="schedules">My Schedule</a>
                 </div>
             </div>
             <Link to = 'campus'>
