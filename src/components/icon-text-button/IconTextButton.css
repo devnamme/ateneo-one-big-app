@@ -1,30 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
 button {
-    border-radius: 0.75em;
+    margin: 24px;
     border: 0;
-    padding: 0.75em 1em;
+    border-radius: 8px;
+    width: 500px;
+    height: 64px;
     background-color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    gap: 1.5em;
+    gap: 16px;
+
 }
 
 button:hover {
-    color: gray;
+    border: 4px solid #0062B8;  
 }
 
-button:hover .icon {
-    filter: invert(56%) sepia(0%) saturate(1058%) hue-rotate(174deg) brightness(89%) contrast(90%);
+button p {
+    font-family: 'Viga', sans-serif;
+    font-size: 24px;
 }
 
-.icon {
-    height: 10%;
-    width: 10%;
 
-}
+
 
