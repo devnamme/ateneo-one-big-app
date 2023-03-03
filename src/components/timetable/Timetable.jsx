@@ -158,21 +158,101 @@ const Timetable = (props) => {
                 Notes: Don't forget to add functionality for conflicting Timeblocks*/}
             <form>
                 <p>Subject:</p>
-                <input name='subject' value={state.subject} type="text" onChange={handleChange}></input>
+                <input name='subject' value={state.subject} type="text" onChange={handleChange} placeholder="CSCI 41"></input>
                 <p>Teacher:</p>
                 <input name='teacher' value={state.teacher} type="text" onChange={handleChange}></input>
                 <p>Classroom:</p>
                 <input name='classroom' value={state.classroom} type="text" onChange={handleChange}></input>
                 <p>Start Time:</p>
-                <input name='startTime' value={state.startTime} type="text" onChange={handleChange}></input>
+                <select name='startTime' value={state.startTime} onChange={handleChange}>
+                    <option value='6:00 AM'>6:00 AM</option>
+                    <option value='6:30 AM'>6:30 AM</option>
+                    <option value='7:00 AM'>7:00 AM</option>
+                    <option value='7:30 AM'>7:30 AM</option>
+                    <option value='8:00 AM'>8:00 AM</option>
+                    <option value='8:30 AM'>8:30 AM</option>
+                    <option value='9:00 AM'>9:00 AM</option>
+                    <option value='9:30 AM'>9:30 AM</option>
+                    <option value='10:00 AM'>10:00 AM</option>
+                    <option value='10:30 AM'>10:30 AM</option>
+                    <option value='11:00 AM'>11:00 AM</option>
+                    <option value='11:30 AM'>11:30 AM</option>
+                    <option value='12:00 PM'>12:00 PM</option>
+                    <option value='12:30 PM'>12:30 PM</option>
+                    <option value='1:00 PM'>1:00 PM</option>
+                    <option value='1:30 PM'>1:30 PM</option>
+                    <option value='2:00 PM'>2:00 PM</option>
+                    <option value='2:30 PM'>2:30 PM</option>
+                    <option value='3:00 PM'>3:00 PM</option>
+                    <option value='3:30 PM'>3:30 PM</option>
+                    <option value='4:00 PM'>4:00 PM</option>
+                    <option value='4:30 PM'>4:30 PM</option>
+                    <option value='5:00 PM'>5:00 PM</option>
+                    <option value='5:30 PM'>5:30 PM</option>
+                    <option value='6:00 PM'>6:00 PM</option>
+                    <option value='6:30 PM'>6:30 PM</option>
+                    <option value='7:00 PM'>7:00 PM</option>
+                    <option value='7:30 PM'>7:30 PM</option>
+                </select>
                 <p>End Time:</p>
-                <input name='endTime' value={state.endTime} type="text" onChange={handleChange}></input>
+                <select name='endTime' value={state.endTime} onChange={handleChange}>
+                <option value='6:00 AM'>6:00 AM</option>
+                    <option value='6:30 AM'>6:30 AM</option>
+                    <option value='7:00 AM'>7:00 AM</option>
+                    <option value='7:30 AM'>7:30 AM</option>
+                    <option value='8:00 AM'>8:00 AM</option>
+                    <option value='8:30 AM'>8:30 AM</option>
+                    <option value='9:00 AM'>9:00 AM</option>
+                    <option value='9:30 AM'>9:30 AM</option>
+                    <option value='10:00 AM'>10:00 AM</option>
+                    <option value='10:30 AM'>10:30 AM</option>
+                    <option value='11:00 AM'>11:00 AM</option>
+                    <option value='11:30 AM'>11:30 AM</option>
+                    <option value='12:00 PM'>12:00 PM</option>
+                    <option value='12:30 PM'>12:30 PM</option>
+                    <option value='1:00 PM'>1:00 PM</option>
+                    <option value='1:30 PM'>1:30 PM</option>
+                    <option value='2:00 PM'>2:00 PM</option>
+                    <option value='2:30 PM'>2:30 PM</option>
+                    <option value='3:00 PM'>3:00 PM</option>
+                    <option value='3:30 PM'>3:30 PM</option>
+                    <option value='4:00 PM'>4:00 PM</option>
+                    <option value='4:30 PM'>4:30 PM</option>
+                    <option value='5:00 PM'>5:00 PM</option>
+                    <option value='5:30 PM'>5:30 PM</option>
+                    <option value='6:00 PM'>6:00 PM</option>
+                    <option value='6:30 PM'>6:30 PM</option>
+                    <option value='7:00 PM'>7:00 PM</option>
+                    <option value='7:30 PM'>7:30 PM</option>
+                    <option value='8:00 PM'>8:00 PM</option>
+                </select>
                 <p>Day:</p>
-                <input name='day' value={state.day} type="text" onChange={handleChange}></input>
+                <select name='day' value={state.day} onChange={handleChange}>
+                    <option value='Monday'>Monday</option>
+                    <option value='Tuesday'>Tuesday</option>
+                    <option value='Wednesday'>Wednesday</option>
+                    <option value='Thursday'>Thursday</option>
+                    <option value='Friday'>Friday</option>
+                    <option value='Saturday'>Saturday</option>
+                </select>
                 <p>Color:</p>
-                <input name='color' value={state.color} type="text" onChange={handleChange}></input>
+                <select name='color' value={state.color}onChange={handleChange}>
+                    <option value='lavender'>Lavender</option>
+                    <option value='skyblue'>Skyblue</option>
+                    <option value='red'>Red</option>
+                    <option value='yellow'>Yellow</option>
+                    <option value='green'>Green</option>
+                    <option value='pink'>Pink</option>
+                </select>
                 <p>duration:</p>
-                <input name='duration' value={state.duration} type="text" onChange={handleChange}></input>
+                <select name='duration' value={state.duration} onChange={handleChange}>
+                    <option value='30'>30min</option>
+                    <option value='60'>1hr</option>
+                    <option value='90'>1hr30min</option>
+                    <option value='120'>2hr</option>
+                    <option value='150'>2hr30min</option>
+                    <option value='180'>3hr</option>
+                </select>
                 <button onClick={timeBlockHandler}> Add Timeblock</button>
             </form>
         </div>
