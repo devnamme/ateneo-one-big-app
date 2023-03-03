@@ -1,4 +1,4 @@
-button {
+.icon-text-btn {
     margin: 24px;
     border: 0;
     border-radius: 8px;
@@ -11,14 +11,14 @@ button {
     align-items: center;
     justify-content: center;
     gap: 16px;
-
+    cursor: pointer;
 }
 
-button:hover {
+.icon-text-btn:hover {
     border: 4px solid #0062B8;  
 }
 
-button p {
+.icon-text-btn p {
     font-family: 'Viga', sans-serif;
     font-style: normal;
     font-weight: 400;

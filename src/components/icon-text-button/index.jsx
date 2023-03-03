@@ -8,8 +8,8 @@ const IconTextButton = (props) => {
     }   
 
     return (
-        <button onClick = {clickHandler}>   
-            <img class='icon' src={`/${props.icon}.svg`} />
+        <button class="icon-text-btn" onClick = {clickHandler}>   
+            <img class='icon' src={`src/assets/icons/${props.icon}.svg`} />
             <p> {props.text} </p>
         </button>
   );
