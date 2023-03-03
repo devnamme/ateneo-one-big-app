@@ -118,7 +118,7 @@ const Timetable = (props) => {
                     <p>9 AM</p>
                     <p>10 AM</p>
                     <p>11 AM</p>
-                    <p>12 AM</p>
+                    <p>12 PM</p>
                     <p>1 PM</p>
                     <p>2 PM</p>
                     <p>3 PM</p>
@@ -164,7 +164,7 @@ const Timetable = (props) => {
                 <p>Classroom:</p>
                 <input name='classroom' value={state.classroom} type="text" onChange={handleChange}></input>
                 <p>Start Time:</p>
-                <select name='startTime' value={state.startTime} onChange={handleChange}>
+                <select name='startTime' value={state.startTime} defaultValue="6:00 AM" onChange={handleChange}>
                     <option value='6:00 AM'>6:00 AM</option>
                     <option value='6:30 AM'>6:30 AM</option>
                     <option value='7:00 AM'>7:00 AM</option>
@@ -195,8 +195,8 @@ const Timetable = (props) => {
                     <option value='7:30 PM'>7:30 PM</option>
                 </select>
                 <p>End Time:</p>
-                <select name='endTime' value={state.endTime} onChange={handleChange}>
-                <option value='6:00 AM'>6:00 AM</option>
+                <select name='endTime' value={state.endTime}  defaultValue="6:30 AM" onChange={handleChange}>
+                    <option value='6:00 AM'>6:00 AM</option>
                     <option value='6:30 AM'>6:30 AM</option>
                     <option value='7:00 AM'>7:00 AM</option>
                     <option value='7:30 AM'>7:30 AM</option>
@@ -227,7 +227,7 @@ const Timetable = (props) => {
                     <option value='8:00 PM'>8:00 PM</option>
                 </select>
                 <p>Day:</p>
-                <select name='day' value={state.day} onChange={handleChange}>
+                <select name='day' value={state.day}  defaultValue="Monday" onChange={handleChange}>
                     <option value='Monday'>Monday</option>
                     <option value='Tuesday'>Tuesday</option>
                     <option value='Wednesday'>Wednesday</option>
@@ -236,7 +236,7 @@ const Timetable = (props) => {
                     <option value='Saturday'>Saturday</option>
                 </select>
                 <p>Color:</p>
-                <select name='color' value={state.color}onChange={handleChange}>
+                <select name='color' value={state.color} defaultValue="lavender" onChange={handleChange}>
                     <option value='lavender'>Lavender</option>
                     <option value='skyblue'>Skyblue</option>
                     <option value='red'>Red</option>
@@ -245,7 +245,7 @@ const Timetable = (props) => {
                     <option value='pink'>Pink</option>
                 </select>
                 <p>duration:</p>
-                <select name='duration' value={state.duration} onChange={handleChange}>
+                <select name='duration' value={state.duration} defaultValue="30" onChange={handleChange}>
                     <option value='30'>30min</option>
                     <option value='60'>1hr</option>
                     <option value='90'>1hr30min</option>
