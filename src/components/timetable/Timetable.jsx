@@ -27,9 +27,9 @@ const Timetable = (props) => {
     const timeBlockHandler = (event) => {
         // Test code
         event.preventDefault();
-        const day = state.day;
 
-        if( day == 'Monday') {
+
+        if( state.day == 'Monday') {
             addTimeBlockMonday([...timeBlockMonday, 
             <Timeblock 
                 subject={state.subject} 
@@ -37,12 +37,11 @@ const Timetable = (props) => {
                 classroom={state.classroom}
                 startTime={state.startTime}
                 endTime={state.endTime}
-                day={state.day}
                 color={state.color}
                 duration={state.duration}/>])
         }
 
-        if( day == 'Tuesday') {
+        if( state.day == 'Tuesday') {
             addTimeBlockTuesday([...timeBlockTuesday, 
             <Timeblock 
                 subject={state.subject} 
@@ -50,12 +49,11 @@ const Timetable = (props) => {
                 classroom={state.classroom}
                 startTime={state.startTime}
                 endTime={state.endTime}
-                day={state.day}
                 color={state.color}
                 duration={state.duration}/>])
         }
 
-        if( day == 'Wednesday') {
+        if( state.day == 'Wednesday') {
             addTimeBlockWednesday([...timeBlockWednesday, 
             <Timeblock 
                 subject={state.subject} 
@@ -63,12 +61,11 @@ const Timetable = (props) => {
                 classroom={state.classroom}
                 startTime={state.startTime}
                 endTime={state.endTime}
-                day={state.day}
                 color={state.color}
                 duration={state.duration}/>])
         }
 
-        if( day == 'Thursday') {
+        if( state.day == 'Thursday') {
             addTimeBlockThursday([...timeBlockThursday, 
             <Timeblock 
                 subject={state.subject} 
@@ -76,12 +73,11 @@ const Timetable = (props) => {
                 classroom={state.classroom}
                 startTime={state.startTime}
                 endTime={state.endTime}
-                day={state.day}
                 color={state.color}
                 duration={state.duration}/>])
         }
 
-        if( day == 'Friday') {
+        if( state.day == 'Friday') {
             addTimeBlockFriday([...timeBlockFriday, 
             <Timeblock 
                 subject={state.subject} 
@@ -89,12 +85,11 @@ const Timetable = (props) => {
                 classroom={state.classroom}
                 startTime={state.startTime}
                 endTime={state.endTime}
-                day={state.day}
                 color={state.color}
                 duration={state.duration}/>])
         }
 
-        if( day == 'Saturday') {
+        if( state.day == 'Saturday') {
             addTimeBlockSaturday([...timeBlockSaturday, 
             <Timeblock 
                 subject={state.subject} 
@@ -102,7 +97,6 @@ const Timetable = (props) => {
                 classroom={state.classroom}
                 startTime={state.startTime}
                 endTime={state.endTime}
-                day={state.day}
                 color={state.color}
                 duration={state.duration}/>])
         }
@@ -111,7 +105,7 @@ const Timetable = (props) => {
     return (
         <div>
             <div class='timetable'>
-                <div class='timeColumn'>
+                <div class='time-column'>
                     <p>6 AM</p>
                     <p>7 AM</p>
                     <p>8 AM</p>
@@ -128,34 +122,46 @@ const Timetable = (props) => {
                     <p>7 PM</p>
                     <p>8 PM</p>
                 </div>
-                <div class='dayColumn'>
+                <div class='day-column'>
                     <h1>M</h1>
+                    <div class='day-schedule'>
                     {timeBlockMonday}
+                    </div>
                 </div>
-                <div class='dayColumn'>
+                <div class='day-column'>
                     <h1>T</h1>
+                    <div class='day-schedule'>
                     {timeBlockTuesday}
+                    </div>
                 </div>
-                <div class='dayColumn'>
+                <div class='day-column'>
                     <h1>W</h1>
+                    <div class='day-schedule'>
                     {timeBlockWednesday}
+                    </div>
                 </div>
-                <div class='dayColumn'>
+                <div class='day-column'>
                     <h1>Th</h1>
+                    <div class='day-schedule'>
                     {timeBlockThursday}
+                    </div>
                 </div>
-                <div class='dayColumn'>
+                <div class='day-column'>
                     <h1>F</h1>
+                    <div class='day-schedule'>
                     {timeBlockFriday}
+                    </div>
                 </div>
-                <div class='dayColumn'>
+                <div class='day-column'>
                     <h1>S</h1>
-                    {timeBlockSaturday}
+                    <div class='day-schedule'>
+                        {timeBlockSaturday}
+                    </div>
                 </div>
             </div>
 
             {/* Buttons for testing the addTimeBlock 
-                Notes: Don't forget to add functionality for conflicting Timeblocks*/}
+                Notes: Don't forget to add functionality for conflicting and overlapping Timeblocks maybe*/}
             <form>
                 <p>Subject:</p>
                 <input name='subject' value={state.subject} type="text" onChange={handleChange} placeholder="CSCI 41"></input>

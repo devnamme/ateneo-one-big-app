@@ -24,7 +24,6 @@ Timeblock.defaultProps = {
     classroom: 'F-204',
     startTime: '8:00 PM',
     endTime: '3:30 PM',
-    day: 'M',
     color: 'lavender',
     duration: '90'
 }
