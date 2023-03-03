@@ -9,7 +9,7 @@ function HomePage() {
       <Header />
       <NotificationCard text="Hello there!" />
       <h1>Home Page</h1>
-      <Card name="CSCI 42" profName="JEFFREY J. JONGKO" />
+      <Card title="CSCI 42" profName="JEFFREY J. JONGKO" />
     </>
   )
 }

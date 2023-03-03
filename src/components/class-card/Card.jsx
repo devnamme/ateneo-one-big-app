@@ -33,7 +33,7 @@ const Card = (props) => {
     <div className='card' style={{ height: height}}>
       <div className='card-header'>
         <div className='card-label' onClick={toggle}>
-          <h4 className='label'>{props.name}</h4>
+          <h4 className='label'>{props.title}</h4>
         </div>
         <div className={imageDiv}>
           <img id='delete' src={del_img} alt='material-symbols_edit-outline' />
