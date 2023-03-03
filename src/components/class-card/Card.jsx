@@ -21,6 +21,14 @@ const Card = (props) => {
     setHeight(isToggled ? "80px" : "362px");
   }
 
+  const addTimeslot = (day, time, room) => {
+    console.log(day, time, room);
+  }
+
+  const pasteAISIS = () => {
+    console.log("btnclicked!");
+  }
+
   return (
     <div className='card' style={{ height: height}}>
       <div className='card-header'>
@@ -82,8 +90,8 @@ const Card = (props) => {
             <Timeslot day='TUE' time='11:00 AM to 12:30 PM' room='F-204'/>
           </div>
           <div className='btns'>
-            <Button text='Add Timeslot' isFilled={false} size="regular" color="#0084F7" />
-            <Button text='Paste from AISIS' isFilled={false} size="regular" color="#0084F7" />
+            <Button text='Add Timeslot' isFilled={false} size="regular" color="#0084F7" onClick={addTimeslot}/>
+            <Button text='Paste from AISIS' isFilled={false} size="regular" color="#0084F7" onClick={pasteAISIS}  />
           </div> 
         </div>   
       )}
