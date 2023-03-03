@@ -1,0 +1,41 @@
+.timetable {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    height: 80vh;
+    width: 60vw;
+    justify-content: space-between;
+}
+
+.timeColumn {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: space-evenly;
+}
+
+.timeColumn p {
+    flex: 1;
+}
+
+.timeColumn p:not(:first-child):before {
+    display: flex;
+    content: "";
+    border-top: 0.1rem solid black;
+    width: 100%;
+}
+
+.dayColumn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.dayColumn p {
+    
+}

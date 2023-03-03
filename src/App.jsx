@@ -1,5 +1,7 @@
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 
+import Timetable from './components/timetable/Timetable.jsx';
+
 import LoginPage from './pages/login'
 import HomePage from './pages/home'
 
@@ -34,7 +36,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Timetable />
   )
 }
 
