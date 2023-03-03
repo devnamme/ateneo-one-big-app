@@ -8,7 +8,7 @@
     font-family: 'Open Sans';
     font-size: 10px;
     height: 90vh;
-    width: 60vw;
+    width: 40vw;
     justify-content: space-between;
     overflow: scroll;
     overflow-x: hidden;
@@ -31,12 +31,14 @@
 
 .timeColumn p {
     flex: 1;
+    margin-left: 4px;
     min-height: 100px;
 }
 
 .timeColumn p:before {
     display: flex;
     content: "";
+    margin-left: -4px;
     border-top: 0.1rem solid black;
     width: 100%;
 }
