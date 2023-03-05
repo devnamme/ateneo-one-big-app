@@ -19,7 +19,7 @@ const Card = (props) => {
   
   const toggle = () => {
     setIsToggled(!isToggled);
-    setHeight(isToggled ? "80px" : "362px");
+    setHeight(isToggled ? "80px" : `${362 + (timeslots.length * 20)}px`);
   }
 
   const addTimeslot = (day, time, room) => {
@@ -36,14 +36,14 @@ const Card = (props) => {
   return (
     <div className='card' style={{ height: height}}>
       <div className='card-header'>
-        <div className='card-label' onClick={toggle}>
+        <div className='card-label'>
           <h4 className='label'>{props.title}</h4>
         </div>
         <div className={imageDiv}>
           <img id='delete' src={del_img} alt='material-symbols_edit-outline' />
         </div>
         <div className='card-image'>
-          <img id='edit' src={edit_img} alt='material-symbols_edit-outline' />
+          <img id='edit' src={edit_img} alt='material-symbols_edit-outline' onClick={toggle}/>
         </div>
       </div>
       {isToggled && (

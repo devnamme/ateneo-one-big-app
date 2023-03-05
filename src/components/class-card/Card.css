@@ -22,7 +22,7 @@
     width: 84px;
     height: 32px;
     left: 24px;
-    top: calc(50% - 32px/2);
+    top: calc(50% - 50px/2);
 
     /* Desktop/H4/Bold */
     font-family: 'Viga', sans-serif;
@@ -41,13 +41,16 @@
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    align-items: c;
 }
 .card-label{
-    width: 300px;
+    width: 280px;
 }
 
 .card-image{
     padding: 5px;
+    position: relative;
+    top: -10px;
 }
 
 .hidden{
