@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Card.css';
-import edit_img from './img/material-symbols_edit-outline.png';
-import del_img from './img/uil_trash-alt.png';
-import check from './img/check.png';
+import edit_img from './img/material-symbols_edit-outline.svg';
+import del_img from './img/uil_trash-alt.svg';
+import check from './img/check.svg';
 import Timeslot from './Timeslot';
 import Button from '../../components/button/Button'
 
