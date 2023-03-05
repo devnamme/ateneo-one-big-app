@@ -29,6 +29,10 @@ const Card = (props) => {
     setHeight(`${362 + (timeslots.length * 32)}px`);
     
   };
+
+  const deleteCard = () => {
+    console.log('deleted!');
+  }
   
   
   const pasteAISIS = () => {
@@ -42,7 +46,7 @@ const Card = (props) => {
           <h4 className='label'>{props.title}</h4>
         </div>
         <div className={imageDiv}>
-          <img id='delete' src={del_img} alt='material-symbols_edit-outline' />
+          <img id='delete' src={del_img} alt='material-symbols_edit-outline' onClick={deleteCard} />
         </div>
         <div className='card-image'>
           <img id='edit' src={edit_img} alt='material-symbols_edit-outline' onClick={toggle}/>
