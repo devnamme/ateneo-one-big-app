@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Card.css';
 import edit_img from './img/material-symbols_edit-outline.svg';
 import del_img from './img/uil_trash-alt.svg';
-import check from './img/check.svg';
+import check from './img/check.png';
 import Timeslot from './Timeslot';
 import Button from '../../components/button/Button'
 
@@ -19,13 +19,15 @@ const Card = (props) => {
   
   const toggle = () => {
     setIsToggled(!isToggled);
-    setHeight(isToggled ? "80px" : `${362 + (timeslots.length * 20)}px`);
+    setHeight(isToggled ? "80px" : `${362 + (timeslots.length * 30)}px`);
+    setSelectedColor(null);
   }
 
   const addTimeslot = (day, time, room) => {
     const newTimeslot = { day, time, room };
     setTimeslots([...timeslots, newTimeslot]);
     setHeight(`${362 + (timeslots.length * 32)}px`);
+    
   };
   
   
@@ -79,7 +81,7 @@ const Card = (props) => {
               className={selectedColor === 'pink' ? 'selected' : ''}
               onClick={() => handleColorClick('pink')}
             />
-           {selectedColor && (
+           {selectedColor && document.getElementById(selectedColor) && (
             <div className='selection' style={{bottom: `${document.getElementById(selectedColor).offsetTop}px`, left: `${document.getElementById(selectedColor).offsetLeft}px`}}>
               <div className='black-rectangle'>
                 <img id="check" src={check} alt="check" />
