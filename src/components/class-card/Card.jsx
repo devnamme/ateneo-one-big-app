@@ -11,6 +11,7 @@ const Card = (props) => {
   const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
   const [height, setHeight] = useState("80px");
   const [selectedColor, setSelectedColor] = useState(null);
+  const [timeslots, setTimeslots] = useState([]);
 
   const handleColorClick = (color) => {
     setSelectedColor(color);
@@ -22,9 +23,12 @@ const Card = (props) => {
   }
 
   const addTimeslot = (day, time, room) => {
-    console.log(day, time, room);
-  }
-
+    const newTimeslot = { day, time, room };
+    setTimeslots([...timeslots, newTimeslot]);
+    setHeight(`${362 + (timeslots.length * 32)}px`);
+  };
+  
+  
   const pasteAISIS = () => {
     console.log("btnclicked!");
   }
@@ -86,12 +90,18 @@ const Card = (props) => {
           <div className='card-info'>
             <p className='content-text'><span className='heavy'>Professor: </span>{props.profName}</p>
             <p className='heavy content-text'>Timeslots</p>
-            <Timeslot day='MON' time='2:00 PM to 3:30 PM' room='CTC-212'/>
-            <Timeslot day='TUE' time='11:00 AM to 12:30 PM' room='F-204'/>
+            {timeslots.map((timeslot, index) => (
+              <Timeslot
+                key={index}
+                day={timeslot.day}
+                time={timeslot.time}
+                room={timeslot.room}
+              />
+            ))}
           </div>
           <div className='btns'>
-            <Button text='Add Timeslot' isFilled={false} size="regular" color="#0084F7" onClick={addTimeslot}/>
-            <Button text='Paste from AISIS' isFilled={false} size="regular" color="#0084F7" onClick={pasteAISIS}  />
+            <Button text='Add Timeslot' isFilled={false} size="regular" color="#0084F7" onClickEvent={() => addTimeslot('MON','11:00 AM to 12:00 PM', 'CTC 212')} />
+            <Button text='Paste from AISIS' isFilled={false} size="regular" color="#0084F7" onClickEvent={pasteAISIS}  />
           </div> 
         </div>   
       )}
