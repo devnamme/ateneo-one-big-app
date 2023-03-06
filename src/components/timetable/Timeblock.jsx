@@ -1,8 +1,6 @@
 import React from 'react';
 import './Timetable.css';
 
-
-
 const Timeblock = (props) => {
    
     return (
