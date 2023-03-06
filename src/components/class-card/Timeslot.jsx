@@ -1,6 +1,6 @@
 import React from 'react'
 import './Timeslot.css'
-import del_img from './img/uil_trash-alt.svg';
+import del_img from './img/uil-trash-alt.svg';
 
 const Timeslot = ({ day, time, room }) => {
   return (

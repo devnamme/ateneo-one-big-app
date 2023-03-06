@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import './Card.css';
 import edit_img from './img/material-symbols_edit-outline.svg';
-import del_img from './img/uil_trash-alt.svg';
-import check from './img/check.png';
+import del_img from './img/uil-trash-alt.svg';
+import check from './img/check.svg';
 import Timeslot from './Timeslot';
 import Button from '../../components/button/Button'
 
 const Card = (props) => {
   const [isToggled, setIsToggled] = useState(false);
   const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
-  const [height, setHeight] = useState("80px");
   const [selectedColor, setSelectedColor] = useState(null);
   const [timeslots, setTimeslots] = useState([]);
 
@@ -19,14 +18,12 @@ const Card = (props) => {
   
   const toggle = () => {
     setIsToggled(!isToggled);
-    setHeight(isToggled ? "80px" : `${362 + (timeslots.length * 30)}px`);
     setSelectedColor(null);
   }
 
   const addTimeslot = (day, time, room) => {
     const newTimeslot = { day, time, room };
     setTimeslots([...timeslots, newTimeslot]);
-    setHeight(`${362 + (timeslots.length * 32)}px`);
     
   };
 
@@ -40,16 +37,16 @@ const Card = (props) => {
   }
 
   return (
-    <div className='card' style={{ height: height}}>
+    <div className='card'>
       <div className='card-header'>
         <div className='card-label'>
           <h4 className='label'>{props.title}</h4>
         </div>
-        <div className={imageDiv}>
-          <img id='delete' src={del_img} alt='material-symbols_edit-outline' onClick={deleteCard} />
+        <div className={imageDiv} id='delete'>
+          <img src={del_img} alt='material-symbols_edit-outline' onClick={deleteCard} />
         </div>
-        <div className='card-image'>
-          <img id='edit' src={edit_img} alt='material-symbols_edit-outline' onClick={toggle}/>
+        <div className='card-image' id='edit'>
+          <img src={edit_img} alt='material-symbols_edit-outline' onClick={toggle}/>
         </div>
       </div>
       {isToggled && (

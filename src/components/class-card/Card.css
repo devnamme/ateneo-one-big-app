@@ -3,7 +3,6 @@
 
 .card{
     width: 400px;
-    height: 80px;
     background: white;
 
     /* Drop Shadow */
@@ -44,14 +43,14 @@
     align-items: c;
 }
 .card-label{
-    width: 280px;
+    width: 310px;
 }
 
 .card-image{
     padding: 5px;
     position: relative;
-    top: -10px;
     cursor: pointer;
+    top: -9px;
 }
 
 .hidden{
@@ -59,7 +58,6 @@
 }
 
 .card-content {
-    height: 282px; 
     padding: 20px;
 }
 
@@ -76,6 +74,9 @@
     border-radius: 4px;
 }
 
+#edit {
+    top: -8px;
+}
 #blue {
     width: 48px;
     height: 48px;
