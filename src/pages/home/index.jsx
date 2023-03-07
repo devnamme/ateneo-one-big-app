@@ -15,10 +15,9 @@ function HomePage() {
 
   return (
     <>
-      <Header />
+      <h1>Home Page</h1>
       <NotificationCard text="Hello there!" />
       <Timetable />
-      <h1>Home Page</h1>
       <Card title="CSCI 42" profName="JEFFREY J. JONGKO" />
     </>
   )

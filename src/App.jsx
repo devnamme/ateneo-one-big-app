@@ -2,6 +2,8 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } 
 
 import * as Auth from './context/Auth'
 
+import PageLayout from './pages/page-layout'
+
 import LoginPage from './pages/login'
 import HomePage from './pages/home'
 
@@ -18,18 +20,22 @@ import ErrorPage from './pages/error'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route index element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
-      
-      <Route path="/news" element={<NewsPage />} />
-      <Route path="/schedules" element={<SchedulesPage />} />
-      <Route path="/schedule/enlistment" element={<EnlistmentPage />} />
-      <Route path="/schedule/:id" element={<SchedulePage />} />
 
-      <Route path="/campus" element={<CampusPage />} />
-      <Route path="/about" element={<AboutPage />} />
+      <Route path="/" element={<PageLayout />}>
+        <Route index element={<HomePage />} />
 
-      <Route path="*" element={<ErrorPage />} />
+        <Route path="/news" element={<NewsPage />} />
+
+        <Route path="/schedules" element={<SchedulesPage />} />
+        <Route path="/schedule/enlistment" element={<EnlistmentPage />} />
+        <Route path="/schedule/:id" element={<SchedulePage />} />
+
+        <Route path="/campus" element={<CampusPage />} />
+        <Route path="/about" element={<AboutPage />} />
+
+        <Route path="*" element={<ErrorPage />} />
+      </Route>      
     </>
   )
 )
