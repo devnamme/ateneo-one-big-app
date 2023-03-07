@@ -4,7 +4,7 @@ import edit_img from './img/material-symbols_edit-outline.svg';
 import del_img from './img/uil-trash-alt.svg';
 import check from './img/check.svg';
 import Timeslot from './Timeslot';
-import Button from '../button/Button'
+import Button from '../button'
 
 const Card = (props) => {
   const [isToggled, setIsToggled] = useState(false);

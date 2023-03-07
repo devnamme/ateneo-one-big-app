@@ -16,6 +16,7 @@
   position: fixed;
   bottom: 24px;
   left: 32px;
+  z-index: 10;
   transform: translate(0, 200%);
 
   transition: 0.3s;
