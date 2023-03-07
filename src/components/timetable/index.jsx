@@ -92,8 +92,8 @@ const Timetable = (props) => {
 
     return (
         <div>
-            <div class='timetable'>
-                <div class='time-column'>
+            <div className='timetable'>
+                <div className='time-column'>
                     <p>6 AM</p>
                     <p>7 AM</p>
                     <p>8 AM</p>
@@ -110,39 +110,39 @@ const Timetable = (props) => {
                     <p>7 PM</p>
                     <p>8 PM</p>
                 </div>
-                <div class='day-column'>
+                <div className='day-column'>
                     <h1>M</h1>
-                    <div class='day-schedule'>
+                    <div className='day-schedule'>
                     {timeBlockMonday}
                     </div>
                 </div>
-                <div class='day-column'>
+                <div className='day-column'>
                     <h1>T</h1>
-                    <div class='day-schedule'>
+                    <div className='day-schedule'>
                     {timeBlockTuesday}
                     </div>
                 </div>
-                <div class='day-column'>
+                <div className='day-column'>
                     <h1>W</h1>
-                    <div class='day-schedule'>
+                    <div className='day-schedule'>
                     {timeBlockWednesday}
                     </div>
                 </div>
-                <div class='day-column'>
+                <div className='day-column'>
                     <h1>Th</h1>
-                    <div class='day-schedule'>
+                    <div className='day-schedule'>
                     {timeBlockThursday}
                     </div>
                 </div>
-                <div class='day-column'>
+                <div className='day-column'>
                     <h1>F</h1>
-                    <div class='day-schedule'>
+                    <div className='day-schedule'>
                     {timeBlockFriday}
                     </div>
                 </div>
-                <div class='day-column'>
+                <div className='day-column'>
                     <h1>S</h1>
-                    <div class='day-schedule'>
+                    <div className='day-schedule'>
                         {timeBlockSaturday}
                     </div>
                 </div>

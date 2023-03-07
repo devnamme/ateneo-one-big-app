@@ -1,7 +1,16 @@
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import * as Auth from './../../context/Auth'
+import { getAuth, signOut } from 'firebase/auth';
 
 function Header() {
+  const user = useContext(Auth.Context)
+
+  function onProfileClick() {
+    signOut(getAuth())
+  }
+
   return (
     <header className="header">
     <div className ="main-wrapper">
@@ -43,8 +52,8 @@ function Header() {
             <Link to = 'about'>
                 <button className="lastbutton">About</button>
             </Link>
-            <div className="profile-container">
-                <img src="/profile.svg" alt="Profile" />
+            <div className="profile-container" onClick={onProfileClick}>
+                <img src={user.photoURL} alt="Profile" />
             </div>
         </div>
     </div>
