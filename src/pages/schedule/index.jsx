@@ -2,6 +2,8 @@ import './Schedule.css'
 import Header from '../../components/header/index'
 import IconTextButton from '../../components/icon-text-button/index'
 import Button from '../../components/button/button'
+import ClassCard from '../../components/class-card/card'
+import Timetable from '../../components/timetable/index'
 
 function SchedulePage() {
   return (
@@ -18,7 +20,7 @@ function SchedulePage() {
               <IconTextButton text="Paste from AISIS" icon="clipboard"/>
             </div>
             <div className="card">
-              <h1>CLASS CARD</h1>
+              <ClassCard/>
             </div>
             <div className="delete-sched">
               <Button text="Delete Schedule" isFilled={true} size="regular" color="#FF2323"/>
@@ -26,7 +28,9 @@ function SchedulePage() {
           </div>
         </div>
         <div class="creator-content">
-          <h1>TIMETABLE</h1>
+          <div className="schedule-timetable">
+            <Timetable/>
+          </div>
         </div>
       </div>
   )
