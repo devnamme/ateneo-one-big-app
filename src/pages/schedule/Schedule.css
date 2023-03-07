@@ -1,0 +1,11 @@
+#schedules-wrapper{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#schedules-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 80px 160px;
+}
