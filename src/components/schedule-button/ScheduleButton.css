@@ -1,0 +1,44 @@
+.schedule-button{
+    margin: 24px;
+    border: 0;
+    border-radius: 8px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 182px;
+    cursor: pointer;
+}
+
+.schedule-button.active{
+    border: 4px solid #0062B8;
+}
+
+.schedule-button:hover {
+    border: 4px solid #0062B8;  
+}
+
+.schedule-text{
+    text-align: left;
+}
+
+.schedule-text h4{
+    font-family: 'Viga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.schedule-text span{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4A4A4A;
+}
