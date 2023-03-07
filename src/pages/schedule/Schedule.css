@@ -1,11 +1,55 @@
-#schedules-wrapper{
+#creator-wrapper{
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
 
-#schedules-container{
+#creator-container{
     display: grid;
     grid-template-columns: auto auto;
     padding: 80px 160px;
+}
+
+#creator-text{
+    padding-left: 24px;
+}
+
+#return{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #4A4A4A;
+
+    margin-bottom: 16px;
+}
+
+#schedule-name{
+    font-family: 'Viga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 43px;
+
+    color: #000000;
+}
+
+#subtitle{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #000000;
+}
+
+.class-card{
+    margin: 24px;
+}
+
+#delete-sched{
+    text-align: center;
 }

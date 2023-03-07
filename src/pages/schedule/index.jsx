@@ -13,26 +13,31 @@ function SchedulePage() {
       </div>
       <div id="creator-container">
         <div class="creator-content">
-            <div className="add-class">
+          <div id="creator-text">
+            <p id="return">Back to all schedules</p>
+            <h3 id="schedule-name">My Schedule Name</h3>
+            <p id="subtitle">SY 2022-2023, Second Semester</p>
+          </div>
+            <div id="add-class">
               <IconTextButton text="Add Class"/>
             </div>
-            <div className="paste-aisis">
+            <div id="paste-aisis">
               <IconTextButton text="Paste from AISIS" icon="clipboard"/>
             </div>
-            <div className="card">
+            <div className="class-card">
               <ClassCard/>
             </div>
-            <div className="delete-sched">
-              <Button text="Delete Schedule" isFilled={true} size="regular" color="#FF2323"/>
+            <div id="delete-sched">
+              <Button text="Delete Schedule" isFilled={true} size="large" color="#FF2323"/>
             </div>
-          </div>
         </div>
         <div class="creator-content">
-          <div className="schedule-timetable">
+          <div id="schedule-timetable">
             <Timetable/>
           </div>
         </div>
       </div>
+    </div>
   )
 }
 
