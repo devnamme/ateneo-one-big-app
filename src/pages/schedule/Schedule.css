@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: auto auto;
     padding: 80px 160px;
+    column-gap: 48px;
 }
 
 #creator-text{
