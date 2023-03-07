@@ -32,8 +32,8 @@ function Header() {
                     <button>Schedule</button>
                 </Link>
                 <div className="dropdown-content">
-                    <a href="schedule/enlistment">Enlistment</a>
-                    <a href="schedules">My Schedule</a>
+                    <Link to="/schedule/enlistment">Enlistment</Link>
+                    <Link to="/schedules">My Schedule</Link>
                 </div>
             </div>
             <Link to = 'campus'>
@@ -42,11 +42,26 @@ function Header() {
             <div className="dropdown">
                 <button>Shortcuts</button>
                 <div className="dropdown-content">
-                    <a href="https://www.ateneo.edu/">Ateneo Website</a>
-                    <a href="https://aisis.ateneo.edu/">AISIS</a>
-                    <a href="https://canvas.ateneo.edu/">Canvas</a>
-                    <a href="https://sites.google.com/ateneo.edu/ls-one">LS One</a>
-                    <a href="https://docs.google.com/spreadsheets/d/1phI0exizODI4pnONwIWaGM8o5paq3aWUW_NbZhNcnzM/edit?usp=sharing">LS Directory</a>
+                    <a
+                      target="_blank"
+                      href="https://www.ateneo.edu/"
+                    >Ateneo Website</a>
+                    <a
+                      target="_blank"
+                      href="https://aisis.ateneo.edu/"
+                    >AISIS</a>
+                    <a
+                      target="_blank"
+                      href="https://canvas.ateneo.edu/"
+                    >Canvas</a>
+                    <a
+                      target="_blank"
+                      href="https://sites.google.com/ateneo.edu/ls-one"
+                    >LS One</a>
+                    <a
+                      target="_blank"
+                      href="https://docs.google.com/spreadsheets/d/1phI0exizODI4pnONwIWaGM8o5paq3aWUW_NbZhNcnzM/edit?usp=sharing"
+                    >LS Directory</a>
                 </div>
             </div>
             <Link to = 'about'>

@@ -1,37 +1,75 @@
 import './Schedules.css'
-import Header from '../../components/header/index'
-import IconTextButton from '../../components/icon-text-button/index'
-import ScheduleButton from '../../components/schedule-button/index'
+import IconTextButton from '../../components/icon-text-button'
+import ScheduleCard from '../../components/schedule-card'
 import Timetable from '../../components/timetable/index'
-import Timeblock from '../../components/timetable/timeblock'
 
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function SchedulesPage() {
+  const [activeSched, setActiveSched] = useState(0)
+  const [schedules, setClasses] = useState([
+    {
+      id: 1,
+      name: 'My Schedule 1',
+      sy: 2022,
+      sem: 1,
+      classes: [
+        {
+          code: 'CSCI 42',
+          color: 'lavender',
+          professor: 'JEFFREY JONGKO',
+          timeslots: [
+            {
+              stime: 1100,
+              etime: 1230,
+              loc: 'F-204',
+            }
+          ]
+        }
+      ]
+    }, {
+      id: 2,
+      name: 'My Schedule 2',
+      sy: 2022,
+      sem: 2,
+      classes: [
+        {
+          code: 'CSCI 42',
+          color: 'lavender',
+          professor: 'JEFFREY JONGKO',
+          timeslots: [
+            {
+              stime: 1100,
+              etime: 1230,
+              loc: 'F-204',
+            }
+          ]
+        }
+      ]
+    },
+  ])
+  
   return (
     <div id="schedules-wrapper">
-      <div className="Header">
-          <Header/>
-      </div>
       <div id="schedules-container">
         <div class="schedules-content">
-           <div className="add-schedule">
-            <IconTextButton/>
-           </div>
-           <div className="enlistment-scheduler">
+          <IconTextButton text="Add New Schedule" icon="add" />
+          <Link to="/schedule/enlistment">
             <IconTextButton text="Enlistment Scheduler" icon="schedule"/>
-           </div>
-          <div className="schedule-bar">
-            <ScheduleButton/>
-            </div>
-          <div className="schedule-bar">
-            <ScheduleButton/>
-          </div>
+          </Link>
+
+          {schedules.map((schedule, i) =>
+            <ScheduleCard
+              key={'schedule-' + i}
+              schedule={schedule}
+              active={activeSched == i}
+              onClick={() => setActiveSched(i)}
+            />
+          )}
         </div>
-        <div class="schedules-content">
-          <div className="schedule-timetable">
-            <Timetable/>
-          </div>
-        </div>
+
+        <Timetable />
       </div>
     </div>
   )

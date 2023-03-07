@@ -6,6 +6,12 @@
 
 #schedules-container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     padding: 80px 160px;
+    column-gap: 48px;
+}
+
+.schedules-content > * {
+  margin: 0 0 24px;
+  display: block;
 }

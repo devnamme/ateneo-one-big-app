@@ -6,32 +6,37 @@ import check from './img/check.svg';
 import Timeslot from './Timeslot';
 import Button from '../button'
 
+const day_name = [
+  'Sun',
+  'Mon',
+  'Tue',
+  'Wed',
+  'Thu',
+  'Fri',
+  'Sat',
+]
+
 const Card = (props) => {
   const [isToggled, setIsToggled] = useState(false);
   const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
   const [selectedColor, setSelectedColor] = useState(null);
-  const [timeslots, setTimeslots] = useState([]);
 
   const handleColorClick = (color) => {
     setSelectedColor(color);
   };
-  
+
   const toggle = () => {
     setIsToggled(!isToggled);
     setSelectedColor(null);
   }
 
   const addTimeslot = (day, time, room) => {
-    const newTimeslot = { day, time, room };
-    setTimeslots([...timeslots, newTimeslot]);
-    
   };
 
   const deleteCard = () => {
     console.log('deleted!');
   }
-  
-  
+
   const pasteAISIS = () => {
     console.log("btnclicked!");
   }
@@ -40,7 +45,7 @@ const Card = (props) => {
     <div className='card'>
       <div className='card-header'>
         <div className='card-label'>
-          <h4 className='label'>{props.title}</h4>
+          <h4 className='label'>{props.class.code}</h4>
         </div>
         <div className={imageDiv} id='delete'>
           <img src={del_img} alt='material-symbols_edit-outline' onClick={deleteCard} />
@@ -91,22 +96,22 @@ const Card = (props) => {
           )}
           </div>
           <div className='card-info'>
-            <p className='content-text'><span className='heavy'>Professor: </span>{props.profName}</p>
+            <p className='content-text'><span className='heavy'>Professor: </span>{props.class.professor}</p>
             <p className='heavy content-text'>Timeslots</p>
-            {timeslots.map((timeslot, index) => (
+            {props.class.timeslots.map((timeslot, index) => (
               <Timeslot
                 key={index}
-                day={timeslot.day}
-                time={timeslot.time}
-                room={timeslot.room}
+                day={day_name[timeslot.day]}
+                time={`${timeslot.stime}-${timeslot.etime}`}
+                room={timeslot.loc}
               />
             ))}
           </div>
           <div className='btns'>
             <Button text='Add Timeslot' isFilled={false} size="regular" color="#0084F7" onClickEvent={() => addTimeslot('MON','11:00 AM to 12:00 PM', 'CTC 212')} />
             <Button text='Paste from AISIS' isFilled={false} size="regular" color="#0084F7" onClickEvent={pasteAISIS}  />
-          </div> 
-        </div>   
+          </div>
+        </div>
       )}
     </div>
   )

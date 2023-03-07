@@ -6,13 +6,18 @@
 
 #creator-container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     padding: 80px 160px;
     column-gap: 48px;
 }
 
+#creator-container .timetable,
+#schedules-container .timetable {
+  justify-self: flex-end;
+}
+
 #creator-text{
-    padding-left: 24px;
+  margin: 0 0 48px;
 }
 
 #return{
@@ -53,4 +58,12 @@
 
 #delete-sched{
     text-align: center;
+}
+
+.schedule-content {
+  margin: 0 0 48px;
+}
+
+.schedule-content > * {
+  margin: 0 0 24px;
 }

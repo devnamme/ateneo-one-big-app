@@ -16,8 +16,6 @@ function HomePage() {
     <>
       <h1>Home Page</h1>
       <NotificationCard text="Hello there!" />
-      <Timetable />
-      <Card title="CSCI 42" profName="JEFFREY J. JONGKO" />
     </>
   )
 }
