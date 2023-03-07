@@ -8,14 +8,15 @@
   }
   
 .filled {
-    background: #0084F7;
+    background: var(--color);
     border: none;
     color: white;
   }
   
 .hollow {
-    border: 1px solid #0084F7;
-    color: #0084F7;
+    border:1px solid var(--color);
+    color: var(--color);
+    background: none;
   }
   
 .regular {
@@ -33,5 +34,6 @@
 .hollow.large {
     border-width: 2px;
 }
+
 
 
