@@ -4,10 +4,9 @@ import * as Auth from './../../context/Auth'
 
 import './Home.css'
 
-import Header from '../../components/header/index';
 import NotificationCard from '../../components/notification-card';
 import Timetable from '../../components/timetable'
-import Card from '../../components/class-card/Card';
+import Card from '../../components/class-card';
 
 function HomePage() {
   const user = useContext(Auth.Context)
