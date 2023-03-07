@@ -1,4 +1,7 @@
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
+
+import * as Auth from './context/Auth'
+
 import LoginPage from './pages/login'
 import HomePage from './pages/home'
 
@@ -33,7 +36,9 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Auth.Provider>
+      <RouterProvider router={router} />
+    </Auth.Provider>
   )
 }
 
