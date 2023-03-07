@@ -2,6 +2,8 @@ import './Schedules.css'
 import Header from '../../components/header/index'
 import IconTextButton from '../../components/icon-text-button/index'
 import ScheduleButton from '../../components/schedule-button/index'
+import Timetable from '../../components/timetable/index'
+import Timeblock from '../../components/timetable/timeblock'
 
 
 function SchedulesPage() {
@@ -26,11 +28,12 @@ function SchedulesPage() {
           </div>
         </div>
         <div class="schedules-content">
-          <h1>TIMETABLE</h1>
+          <div className="schedule-timetable">
+            <Timetable/>
+          </div>
         </div>
       </div>
     </div>
   )
 }
-
 export default SchedulesPage
