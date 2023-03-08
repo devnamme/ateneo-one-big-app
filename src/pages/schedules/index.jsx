@@ -3,10 +3,28 @@ import IconTextButton from '../../components/icon-text-button'
 import ScheduleCard from '../../components/schedule-card'
 import Timetable from '../../components/timetable/index'
 
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
+import * as Auth from './../../context/Auth'
+
+const db = getFirestore(Auth.FirebaseApp)
+
+// try {
+//   const docRef = await addDoc(collection(db, "users"), {
+//     first: "Ada",
+//     last: "Lovelace",
+//     born: 1815
+//   });
+//   console.log("Document written with ID: ", docRef.id);
+// } catch (e) {
+//   console.error("Error adding document: ", e);
+// }
+
 function SchedulesPage() {
+  const user = useContext(Auth.Context)
+
   const [activeSched, setActiveSched] = useState(0)
   const [schedules, setClasses] = useState([
     {
@@ -53,7 +71,7 @@ function SchedulesPage() {
   return (
     <div id="schedules-wrapper">
       <div id="schedules-container">
-        <div class="schedules-content">
+        <div className="schedules-content">
           <IconTextButton text="Add New Schedule" icon="add" />
           <Link to="/schedule/enlistment">
             <IconTextButton text="Enlistment Scheduler" icon="schedule"/>

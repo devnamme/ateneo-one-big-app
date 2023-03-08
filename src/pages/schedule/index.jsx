@@ -45,14 +45,14 @@ function SchedulePage() {
 
   return (
     <div className="main-wrapper" id="creator-container">
-      <div class="creator-content">
+      <div className="creator-content">
         <div id="creator-text">
           <Link id="return" to="/schedules">Back to all schedules</Link>
           <h3 id="schedule-name">{schedule.name}</h3>
           <p id="subtitle">SY {schedule.sy}-{schedule.sy + 1}, {sem_name[schedule.sem]}</p>
         </div>
 
-        <div class="schedule-content">
+        <div className="schedule-content">
           <IconTextButton text="Add Class" icon="add" width="400" />
           <IconTextButton text="Paste from AISIS" icon="clipboard" width="400" />
 

@@ -27,7 +27,7 @@ const ScheduleCard = (props) => {
         </div>
       </div>
       <Link className="edit-icon" to={`/schedule/${props.schedule.id}`}>
-        <img class="edit" src="/src/assets/icons/edit.svg"/>
+        <img className="edit" src="/src/assets/icons/edit.svg"/>
       </Link>
     </button>
   )
