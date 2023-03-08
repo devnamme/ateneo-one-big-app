@@ -2,13 +2,13 @@ import React from 'react'
 import './Timeslot.css'
 import del_img from './img/uil-trash-alt.svg';
 
-const Timeslot = ({ day, time, room }) => {
+const Timeslot = (props) => {
   return (
     <div className='timeslot'>
-        <p id='day'>{day}</p>
-        <p id='time'>{time}</p>
-        <p id='room'>{room}</p>
-        <img id='del' src={del_img} alt='material-symbols_edit-outline'/>
+        <p className='day'>{props.day}</p>
+        <p className='time'>{props.time}</p>
+        <p className='room'>{props.room}</p>
+        <img className='del' src={del_img} alt='material-symbols_edit-outline'/>
     </div>
   )
 }

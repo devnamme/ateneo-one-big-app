@@ -29,7 +29,7 @@ const router = createBrowserRouter(
 
         <Route path="/schedules" element={<SchedulesPage />} />
         <Route path="/schedule/enlistment" element={<EnlistmentPage />} />
-        <Route path="/schedule/:id" element={<SchedulePage />} />
+        <Route path="/schedule/:schedule_id" element={<SchedulePage />} />
 
         <Route path="/campus" element={<CampusPage />} />
         <Route path="/about" element={<AboutPage />} />

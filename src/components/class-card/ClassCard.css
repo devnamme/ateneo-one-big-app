@@ -1,0 +1,93 @@
+/* Property 1=default */
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+.card{
+    width: 400px;
+    background: white;
+
+    /* Drop Shadow */
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    display: flex;
+    flex-direction: column;
+    transition: height 0.3s ease-in-out;
+}
+
+.label{
+    /* Desktop/H4/Bold */
+    font-family: 'Viga', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    white-space: nowrap;
+    margin: 0 8px 0 0;
+
+    /* Black */
+    color: #000000;
+
+    flex-grow: 1;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+
+    padding: 16px 24px;
+    min-height: 80px;
+}
+
+.card-image{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.card-content {
+    padding: 0 24px 32px;
+}
+
+.card-info p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    justify-content: space-around;
+}
+
+.selected {
+    border: 2px solid black;
+}
+
+.selection {
+    position: absolute;
+}
+
+.content-text{
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.heavy{
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+}

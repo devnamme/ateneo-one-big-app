@@ -1,6 +1,21 @@
-import { useState } from 'react'
-
-import { Link } from 'react-router-dom'
+import {
+  useState,
+  useEffect,
+  useContext,
+} from 'react'
+import {
+  Link,
+  Navigate,
+  useParams
+} from 'react-router-dom'
+import * as Auth from './../../context/Auth'
+import {
+  collection,
+  doc,
+  setDoc,
+  updateDoc,
+  onSnapshot,
+} from 'firebase/firestore'
 
 import './Schedule.css'
 
@@ -16,50 +31,54 @@ const sem_name = [
 ]
 
 function SchedulePage() {
-  const [schedule, setSchedule] = useState({
-    id: 1,
-    name: 'My Schedule 1',
-    sy: 2022,
-    sem: 1,
-    classes: [
-      {
-        code: 'CSCI 42',
-        color: 'lavender',
-        professor: 'JEFFREY JONGKO',
-        timeslots: [
-          {
-            day: 1,
-            stime: 1100,
-            etime: 1230,
-            loc: 'F-204',
-          }, {
-            day: 4,
-            stime: 1100,
-            etime: 1230,
-            loc: 'F-204',
-          }
-        ]
-      }
-    ]
-  })
+  let { schedule_id } = useParams()
+  const user = useContext(Auth.Context)
+
+  const [shouldError, setShouldError] = useState(false)
+  const [schedule, setSchedule] = useState({})
+  const [classes, setClasses] = useState([])
+
+  useEffect(() => {
+    if (!user || !user.uid) return
+
+    onSnapshot(doc(Auth.db, 'users', user.uid, 'schedules', schedule_id), (snapshot) => {
+      if (!snapshot.exists())
+        setShouldError(true)
+      else
+        setSchedule(snapshot.data())
+    })
+
+    onSnapshot(collection(Auth.db, 'users', user.uid, 'schedules', schedule_id, 'classes'), (snapshot) => {
+      let temp_classes = []
+      snapshot.docs.forEach((doc) => {
+        temp_classes.push({ ...doc.data(), class_id: doc.id })
+      })
+      setClasses(temp_classes)
+    })
+  }, [user])
+
+  if (shouldError)
+    return (<Navigate to='/error' />)
 
   return (
     <div className="main-wrapper" id="creator-container">
       <div className="creator-content">
         <div id="creator-text">
           <Link id="return" to="/schedules">Back to all schedules</Link>
-          <h3 id="schedule-name">{schedule.name}</h3>
-          <p id="subtitle">SY {schedule.sy}-{schedule.sy + 1}, {sem_name[schedule.sem]}</p>
+          <h3 id="schedule-name">{schedule.name ? schedule.name : ''}</h3>
+          <p id="subtitle">{schedule.sy ? `SY ${schedule.sy}-${schedule.sy + 1},` : ''} {schedule.sem ? sem_name[schedule.sem] : ''}</p>
         </div>
 
         <div className="schedule-content">
           <IconTextButton text="Add Class" icon="add" width="400" />
           <IconTextButton text="Paste from AISIS" icon="clipboard" width="400" />
 
-          {schedule.classes.map((c, i) =>
+          {classes.map((c, i) =>
             <ClassCard
               key={'class-' + i}
-              class={c}
+              schedule_id={schedule_id}
+              class_id={c.class_id}
+              timeslots={[]}
             />
           )}
         </div>

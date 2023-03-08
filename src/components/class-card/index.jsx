@@ -1,36 +1,71 @@
-import React, { useState } from 'react';
-import './Card.css';
+import React, {
+  useState,
+  useEffect,
+  useContext,
+} from 'react';
+import * as Auth from './../../context/Auth'
+import {
+  collection,
+  doc,
+  addDoc,
+  setDoc,
+  updateDoc,
+  onSnapshot,
+} from 'firebase/firestore'
 import edit_img from './img/material-symbols_edit-outline.svg';
 import del_img from './img/uil-trash-alt.svg';
-import check from './img/check.svg';
 import Timeslot from './Timeslot';
 import Button from '../button'
+import ColorBlock from './ColorBlock'
 
-const day_name = [
-  'Sun',
-  'Mon',
-  'Tue',
-  'Wed',
-  'Thu',
-  'Fri',
-  'Sat',
-]
+import './ClassCard.css';
+
+const day_name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const color_names = ['lavender', 'blue', 'red', 'yellow', 'green', 'pink']
 
 const Card = (props) => {
-  const [isToggled, setIsToggled] = useState(false);
-  const imageDiv = `card-image ${isToggled ? '' : 'hidden'}`
-  const [selectedColor, setSelectedColor] = useState(null);
+  const user = useContext(Auth.Context)
 
-  const handleColorClick = (color) => {
-    setSelectedColor(color);
+  const [isToggled, setIsToggled] = useState(false);
+  const [code, setCode] = useState('')
+  const [color, setColor] = useState('lavender')
+  const [professor, setProfessor] = useState('')
+  const [timeslots, setTimeslots] = useState([])
+
+  useEffect(() => {
+    if (!user || !user.uid) return
+
+    onSnapshot(doc(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id), (snapshot) => {
+      const data = snapshot.data()
+      setCode(data.code)
+      setColor(data.color)
+      setProfessor(data.professor)
+    })
+
+    onSnapshot(collection(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id, 'timeslots'), (snapshot) => {
+      let temp_timeslots = []
+      snapshot.docs.forEach((doc) => {
+        temp_timeslots.push({ ...doc.data(), timeslot_id: doc.id })
+      })
+      setTimeslots(temp_timeslots)
+    })
+  }, [user])
+
+  const handleColorClick = (newColor) => {
+    setColor(newColor);
   };
 
   const toggle = () => {
     setIsToggled(!isToggled);
-    setSelectedColor(null);
   }
 
-  const addTimeslot = (day, time, room) => {
+  const addTimeslot = () => {
+    setTimeslots([...timeslots, {
+      day: 1,
+      loc: '',
+      start: 0,
+      end: 0,
+    }])
   };
 
   const deleteCard = () => {
@@ -40,14 +75,11 @@ const Card = (props) => {
   const pasteAISIS = () => {
     console.log("btnclicked!");
   }
-
   return (
     <div className='card'>
       <div className='card-header'>
-        <div className='card-label'>
-          <h4 className='label'>{props.class.code}</h4>
-        </div>
-        <div className={imageDiv} id='delete'>
+        <h4 className='label'>{code}</h4>
+        <div className={`card-image ${isToggled ? '' : 'hidden'}`} id='delete'>
           <img src={del_img} alt='material-symbols_edit-outline' onClick={deleteCard} />
         </div>
         <div className='card-image' id='edit'>
@@ -57,52 +89,23 @@ const Card = (props) => {
       {isToggled && (
         <div className='card-content'>
           <div className='color-container'>
-            <div
-              id='lavender'
-              className={selectedColor === 'lavender' ? 'selected' : ''}
-              onClick={() => handleColorClick('lavender')}
-            />
-            <div
-              id='blue'
-              className={selectedColor === 'blue' ? 'selected' : ''}
-              onClick={() => handleColorClick('blue')}
-            />
-            <div
-              id='red'
-              className={selectedColor === 'red' ? 'selected' : ''}
-              onClick={() => handleColorClick('red')}
-            />
-            <div
-              id='yellow'
-              className={selectedColor === 'yellow' ? 'selected' : ''}
-              onClick={() => handleColorClick('yellow')}
-            />
-            <div
-              id='green'
-              className={selectedColor === 'green' ? 'selected' : ''}
-              onClick={() => handleColorClick('green')}
-            />
-            <div
-              id='pink'
-              className={selectedColor === 'pink' ? 'selected' : ''}
-              onClick={() => handleColorClick('pink')}
-            />
-           {selectedColor && document.getElementById(selectedColor) && (
-            <div className='selection' style={{bottom: `${document.getElementById(selectedColor).offsetTop}px`, left: `${document.getElementById(selectedColor).offsetLeft}px`}}>
-              <div className='black-rectangle'>
-                <img id="check" src={check} alt="check" />
-              </div>
-            </div>
-          )}
+            { color_names.map((c) =>
+              <ColorBlock
+                key={`color-block-${c}`}
+                color={c}
+                selected={color == c}
+                onclick={() => handleColorClick(c)}
+              />
+            )}
           </div>
           <div className='card-info'>
-            <p className='content-text'><span className='heavy'>Professor: </span>{props.class.professor}</p>
+            <p className='content-text'><span className='heavy'>Professor: </span>{professor}</p>
             <p className='heavy content-text'>Timeslots</p>
-            {props.class.timeslots.map((timeslot, index) => (
+            {timeslots.map((timeslot, index) => (
               <Timeslot
-                key={index}
+                key={`timeslot-${index}`}
                 day={day_name[timeslot.day]}
-                time={`${timeslot.stime}-${timeslot.etime}`}
+                time={`${timeslot.start}-${timeslot.end}`}
                 room={timeslot.loc}
               />
             ))}
