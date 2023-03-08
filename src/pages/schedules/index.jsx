@@ -6,67 +6,57 @@ import Timetable from '../../components/timetable/index'
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { getFirestore, collection, addDoc } from 'firebase/firestore'
+import {
+  collection,
+  doc,
+  addDoc,
+  setDoc,
+  updateDoc,
+  onSnapshot,
+} from 'firebase/firestore'
 import * as Auth from './../../context/Auth'
-
-const db = getFirestore(Auth.FirebaseApp)
-
-// try {
-//   const docRef = await addDoc(collection(db, "users"), {
-//     first: "Ada",
-//     last: "Lovelace",
-//     born: 1815
-//   });
-//   console.log("Document written with ID: ", docRef.id);
-// } catch (e) {
-//   console.error("Error adding document: ", e);
-// }
 
 function SchedulesPage() {
   const user = useContext(Auth.Context)
 
   const [activeSched, setActiveSched] = useState(0)
-  const [schedules, setClasses] = useState([
-    {
-      id: 1,
-      name: 'My Schedule 1',
-      sy: 2022,
-      sem: 1,
-      classes: [
-        {
-          code: 'CSCI 42',
-          color: 'lavender',
-          professor: 'JEFFREY JONGKO',
-          timeslots: [
-            {
-              stime: 1100,
-              etime: 1230,
-              loc: 'F-204',
-            }
-          ]
-        }
-      ]
-    }, {
-      id: 2,
-      name: 'My Schedule 2',
-      sy: 2022,
-      sem: 2,
-      classes: [
-        {
-          code: 'CSCI 42',
-          color: 'lavender',
-          professor: 'JEFFREY JONGKO',
-          timeslots: [
-            {
-              stime: 1100,
-              etime: 1230,
-              loc: 'F-204',
-            }
-          ]
-        }
-      ]
-    },
-  ])
+  const [schedules, setSchedules] = useState([])
+
+  function createUserSchedules() {
+    console.log('creating user schedules...')
+    setDoc(doc(Auth.db, 'users', user.uid), {
+      'name': user.displayName,
+      'active_schedule': 0,
+    })
+  }
+
+  useEffect(() => {
+    if (!user || !user.uid) return
+
+    onSnapshot(doc(Auth.db, 'users', user.uid), (snapshot) => {
+      if (!snapshot.exists())
+        createUserSchedules()
+      else {
+        console.log('new snapshot at', Date.now())
+
+        const data = snapshot.data()
+        setActiveSched(data.active_schedule)
+      }
+    })
+
+    onSnapshot(collection(Auth.db, 'users' , user.uid, 'schedules'), (snapshot) => {
+      let temp_scheds = []
+      snapshot.docs.forEach((doc) => temp_scheds.push({ ...doc.data(), id: doc.id }))
+
+      setSchedules(temp_scheds)
+    })
+  }, [user])
+
+  function local_setActiveSched(sched_num) {
+    setActiveSched(sched_num)
+    updateDoc(doc(Auth.db, 'users', user.uid), { 'active_schedule': sched_num })
+      .catch((err) => console.log(err))
+  }
   
   return (
     <div id="schedules-wrapper">
@@ -82,7 +72,7 @@ function SchedulesPage() {
               key={'schedule-' + i}
               schedule={schedule}
               active={activeSched == i}
-              onClick={() => setActiveSched(i)}
+              onclick={() => local_setActiveSched(i)}
             />
           )}
         </div>
