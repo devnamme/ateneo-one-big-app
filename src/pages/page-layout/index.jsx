@@ -3,7 +3,6 @@ import { Navigate, Outlet } from 'react-router-dom';
 import * as Auth from './../../context/Auth'
 
 import Header from '../../components/header/index';
-import MobileHeader from '../../components/mobile-header/index';
 
 function PageLayout() {
   const user = useContext(Auth.Context)
@@ -11,7 +10,7 @@ function PageLayout() {
 
   return (
     <>
-      <MobileHeader />
+      <Header />
       <Outlet />
     </>
   )

@@ -14,6 +14,7 @@ header .mobile-main-wrapper {
 }
 
 
+
 header .mobile-main-wrapper > *:nth-child(2) {
     margin-left: auto;
     transform: translateX(-45px);
@@ -75,4 +76,68 @@ header .mobile-main-wrapper > *:nth-child(2) {
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+}
+
+.menu-item-container #menu-home{
+    margin-top: 42px;
+}
+
+.menu-item-container #text-home{
+    margin-top: 44px;
+}
+.menu-item-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 37px;
+    margin-top: 30px;
+}
+
+.item-text{
+    font-family: 'Viga';
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 16px;
+    padding-left: 11px;
+    padding-bottom: 0;
+}
+
+#shortcuts{
+    padding-left: 0px;
+}
+
+
+.collapsible-div{
+    padding: 4px 71px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsible-text{
+    font-family: 'Viga';
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.log-out{
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    justify-content: end;
+    align-items: end;
+    padding-right: 34px;
+    padding-top: 23px;
+    padding-bottom: 29px;
+}
+
+#logout-text{
+    font-family: 'Open Sans';
+    font-size: 10px;
+    padding-left: 4px;
+    padding-bottom: 2px;
 }
