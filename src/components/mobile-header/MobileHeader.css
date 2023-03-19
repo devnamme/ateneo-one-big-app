@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
+
+header{
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.2);
+}
+  
+header .mobile-main-wrapper {
+    padding: 12px 0px;
+    display: flex;  
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+header .mobile-main-wrapper > *:nth-child(2) {
+    margin-left: auto;
+    transform: translateX(-45px);
+    margin-right: auto;
+  }
+
+.mobile-logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+#logo {
+    width: 30px;
+    height: 31px;
+    margin-left: 44px;
+}
+
+.hamburger{
+    width: 26px;
+    height: 26px;
+    margin-left: 24px;
+}
+  
+.mobile-logo-container h4 {
+    font-family: 'Viga';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+
+}
+  
+.mobile-logo-container a {
+    display: flex;
+    text-decoration: none;
+    color: #080606;
+}
+  
+.image-data-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 24px;
+    margin-top: 53px;
+    border: 1px solid #FFFFFF;
+}
+
+.profile-data{
+    padding-top: 53px;
+    font-size: 24px;
+    width: 70px;
+    font-family: 'Viga';
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
