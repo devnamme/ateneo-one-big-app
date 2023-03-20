@@ -1,0 +1,565 @@
+/* --- Creator Container --- */
+
+#creator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    gap: 93px;
+    width: 1160px;
+    height: 1902px;
+    left: 146px;
+    top: 70px;
+    }
+    
+    h2 {
+    font-family: 'Viga', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    color: #003A6C;
+    width: 705px;
+    height: 65px;
+    margin: 0;
+    }
+    
+    /* --- OBA --- */
+    
+    .OBA {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0;
+    gap: 204px;
+    width: 1160px;
+    height: 252px;
+    }
+    
+    .OBA-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 23px;
+    width: 704px;
+    height: 242px;
+    }
+    
+    .OBA img {
+    width: 232px;
+    height: 232px;
+    }
+    
+    .OBA p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    width: 706px;
+    height: 154px;
+    }
+    
+    /* --- Ateneo --- */
+    
+    .Ateneo {
+    width: 1160px;
+    height: 445px;
+    position: relative;
+    margin-top: 70px;
+    }
+    
+    .Ateneo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 23px;
+    width: 1159px;
+    height: 434px;
+    }
+    
+    .Ateneo blockquote {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    width: 1088px;
+    height: 50px;
+    margin: 0;
+    }
+    .Ateneo p {
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+        width: 706px;
+        height: 154px;
+    }
+    
+    .Ateneo-body-pic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    width: 1159px;
+    height: 273px;
+    }
+    
+    .Ateneo body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    width: 626px;
+    height: 198px;
+    }
+    
+    .Ateneo img {
+    width: 443px;
+    height: 253px;
+    filter: drop-shadow(2px 3px 9px rgba(0, 0, 0, 0.25));
+    }
+    
+    /* --- Our Team --- */
+    .Team{
+        width: 1152.49px;
+        height: 1051px;
+
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 23px;
+
+        width: 1152.49px;
+        height: 1050.17px;
+        left: 3.75px;
+        top: 872px;
+
+    }
+    .Team-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 44px;
+        
+        width: 1152px;
+        height: 927.06px;
+        
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+.Team-three{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    
+    width: 1152px;
+    height: 454px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+}
+
+.Team-two{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    
+    width: 783.44px;
+    height: 429.06px;
+    left: 152.06px;
+    top: 1493.94px;
+}
+
+.Team-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 21px 35px;
+    gap: 14px;
+    
+    width: 378.01px;
+    height: 453.81px;
+    left: 0px;
+    top: 0px;
+    
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.Team-card:hover{
+    transition: all 0.3s ease 0.3s;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.Team-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    
+    width: 213.02px;
+    height: 91.81px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.Team-card-links{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    
+    width: 101.8px;
+    height: 26px;
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.Team-card-links a{
+    width: 26px;
+    height: 26px;
+    left: 0px;
+    top: 0px;  
+}
+
+.Team-card-links .logo{
+    position: relative;
+}
+
+.Team-card-links .altlogo{
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+
+.Team-card-links .logo:hover{
+    opacity: 0%;
+    transition: all 0.1s ease 0.1s;
+}
+
+.Team name{
+
+    width: 213.02px;
+    height: 26.8px;
+    left: 36.31px;
+    top: 308.78px;
+
+    /* Desktop/Body/Large/Bold */
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #000000;
+}
+
+.Team position{
+    width: 72.62px;
+    height: 15.01px;
+    left: 36.31px;
+    top: 346.31px;
+
+    /* Desktop/Body/XXS/Regular */
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+
+    /* Black */
+
+color: #000000;
+}
+
+.Team-card .profile-pic{ 
+    width: 308.01px;
+    height: 306px;
+    
+    background: url(IMG_1201.jpg);
+    border-radius: 10px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+@media (max-width: 360px){
+    #creator-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 48px;    
+        width: 347px;
+        height: 3389.73px; 
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .OBA{
+        /* Auto layout */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+
+        position: absolute;
+        width: 347px;
+        height: 662px;
+        left: 0px;
+        top: 0px;
+
+    }
+
+    h2{
+        width: 347px;
+        height: 43px;
+
+        font-family: 'Viga';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        color: #003A6C;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .OBA img{
+        width: 169px;
+        height: 169px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .OBA p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+        width: 274px;
+        height: 645px;
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+    }
+
+    .OBA-text{
+        width: 262px;
+        height: 396px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        
+        /* Black */
+        
+        color: #000000;
+        
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+    }
+
+    .Ateneo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+        
+        position: absolute;
+        width: 274px;
+        height: 892px;
+        left: 0px;
+        top: 10px;
+
+    }
+
+    .Ateneo-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+
+        width: 274px;
+        height: 645px;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+    }
+
+    .Ateneo p{
+        width: 274px;
+        height: 418px;
+
+        /* Desktop/Body/Normal/Regular */
+
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        /* Black */
+
+        color: #000000;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .Ateneo blockquote{
+        width: 260px;
+        height: 200px;
+
+        /* Desktop/Body/Large/Italic */
+
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+
+        /* Black */
+
+        color: #000000;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .Team{
+        width: 269.39px;
+        height: 1730.73px;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+    }
+
+    .Team-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+        width: 269.39px;
+        height: 1660.73px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .Team-card{
+        width: 269.39px;
+        height: 324.15px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .Team-card .profile-pic{
+        width: 217.75px;
+        height: 211.36px;
+        right: 25.11px;
+        top: calc(50% - 211.36px/2 - 707.97px);
+        
+        border-radius: 10px;
+    }
+
+    .Team-card-text{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 2px;
+    width: 185.89px;
+    height: 86px;
+    left: 17px;
+    top: 909.29px;
+    }
+
+    .Team-three{
+        display: contents;
+    }
+
+    .Team-two{
+        display:contents;
+    }
+
+
+}
+
+
+
