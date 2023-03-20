@@ -1,11 +1,16 @@
 .timeslot{
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "day loc del"
+      "day time del";
     align-items: center;
+    column-gap: 16px;
 
     color: black;
     font-size: 16px;
-    margin: 0 0 4px;
+    margin: 0 0 8px;
 }
 
 .timeslot p {
@@ -13,6 +18,7 @@
 }
 
 .timeslot .del {
+  grid-area: del;
     cursor: pointer;
     justify-self: flex-end;
 
@@ -21,13 +27,16 @@
 }
 
 .timeslot .room {
+  grid-area: loc;
   text-align: center;
 }
 
 .timeslot .time {
+  grid-area: time;
   text-align: center;
 }
 
 .timeslot .day{
+  grid-area: day;
     text-transform: uppercase;
 }

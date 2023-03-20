@@ -53,7 +53,20 @@ const Card = (props) => {
   };
 
   const toggle = () => {
-    setIsToggled(!isToggled);
+    setIsToggled((prev) => {
+      if (prev) {
+        console.log('save')
+
+        updateDoc(doc(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id), {
+          code: code,
+          color: color,
+          professor: professor,
+          timeslots: timeslots,
+        })
+      }
+
+      return !prev
+    });
   }
 
   const addTimeslot = () => {
@@ -75,10 +88,19 @@ const Card = (props) => {
     console.log("btnclicked!");
   }
 
+  const changeTimeslotValue = (index, key, value) => {
+    let temp = timeslots
+    temp[index][key] = value
+    setTimeslots([...timeslots])
+  }
+
   return (
     <div className='card'>
       <div className='card-header'>
-        <h4 className='label'>{code}</h4>
+        { isToggled
+          ? <input className="label" type="text" value={code} onChange={() => setCode(event.target.value)} />
+          : <h4 className='label'>{code}</h4>
+        }
         <div className={`card-image ${isToggled ? '' : 'hidden'}`} id='delete'>
           <img src={del_img} alt='material-symbols_edit-outline' onClick={() => props.onDelete()} />
         </div>
@@ -99,13 +121,37 @@ const Card = (props) => {
             )}
           </div>
           <div className='card-info'>
-            <p className='content-text'><span className='heavy'>Professor: </span>{professor}</p>
+            <p className='content-text'>
+              <span className='heavy'>Professor: </span>
+              <input type="text" value={professor} onChange={() => setProfessor(event.target.value)} />
+            </p>
             <p className='heavy content-text'>Timeslots</p>
             {timeslots.map((timeslot, index) => (
               <div className='timeslot' key={`timeslot-${index}`}>
-                <p className='day'>{day_name[timeslot.day]}</p>
-                <p className='time'>{`${timeslot.start} - ${timeslot.end}`}</p>
-                <p className='room'>{timeslot.loc}</p>
+                <select className='day' value={timeslot.day} onChange={() => changeTimeslotValue(index, 'day', parseInt(event.target.value))}>
+                  <option value="0">Sun</option>
+                  <option value="1">Mon</option>
+                  <option value="2">Tue</option>
+                  <option value="3">Wed</option>
+                  <option value="4">Thu</option>
+                  <option value="5">Fri</option>
+                  <option value="6">Sat</option>
+                </select>
+
+                <div className="time">
+                  <input
+                    type="time"
+                    value={`${Math.floor(timeslot.start / 100).toString().padStart(2, "0")}:${(timeslot.start % 100).toString().padStart(2, "0")}`}
+                    onChange={() => changeTimeslotValue(index, 'start', parseInt(event.target.value.split(":")[0]) * 100 + parseInt(event.target.value.split(":")[1]))}
+                  /> - <input
+                    type="time"
+                    value={`${Math.floor(timeslot.end / 100).toString().padStart(2, "0")}:${(timeslot.end % 100).toString().padStart(2, "0")}`}
+                    onChange={() => changeTimeslotValue(index, 'end', parseInt(event.target.value.split(":")[0]) * 100 + parseInt(event.target.value.split(":")[1]))}
+                  />
+                </div>
+
+                <input className='room' value={timeslot.loc} onChange={() => changeTimeslotValue(index, 'loc', event.target.value)} />
+
                 <img className='del' src={del_img} alt='material-symbols_edit-outline' onClick={() => deleteTimeslot(index)}/>
               </div>
             ))}
