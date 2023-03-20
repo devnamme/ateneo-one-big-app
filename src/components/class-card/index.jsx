@@ -14,10 +14,11 @@ import {
 } from 'firebase/firestore'
 import edit_img from './img/material-symbols_edit-outline.svg';
 import del_img from './img/uil-trash-alt.svg';
-import Timeslot from './Timeslot';
 import Button from '../button'
 import ColorBlock from './ColorBlock'
 
+
+import './Timeslot.css'
 import './ClassCard.css';
 
 const day_name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -40,15 +41,16 @@ const Card = (props) => {
       setCode(data.code)
       setColor(data.color)
       setProfessor(data.professor)
+      setTimeslots(data.timeslots)
     })
 
-    onSnapshot(collection(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id, 'timeslots'), (snapshot) => {
-      let temp_timeslots = []
-      snapshot.docs.forEach((doc) => {
-        temp_timeslots.push({ ...doc.data(), timeslot_id: doc.id })
-      })
-      setTimeslots(temp_timeslots)
-    })
+    // onSnapshot(collection(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id, 'timeslots'), (snapshot) => {
+    //   let temp_timeslots = []
+    //   snapshot.docs.forEach((doc) => {
+    //     temp_timeslots.push({ ...doc.data(), timeslot_id: doc.id })
+    //   })
+    //   // setTimeslots(temp_timeslots)
+    // })
   }, [user])
 
   const handleColorClick = (newColor) => {
@@ -62,11 +64,17 @@ const Card = (props) => {
   const addTimeslot = () => {
     setTimeslots([...timeslots, {
       day: 1,
-      loc: '',
+      loc: 'TBA',
       start: 0,
       end: 0,
     }])
   };
+
+  const deleteTimeslot = (index) => {
+    let temp = timeslots;
+    temp.splice(index, 1)
+    setTimeslots([...temp])
+  }
 
   const deleteCard = () => {
     console.log('deleted!');
@@ -75,6 +83,7 @@ const Card = (props) => {
   const pasteAISIS = () => {
     console.log("btnclicked!");
   }
+
   return (
     <div className='card'>
       <div className='card-header'>
@@ -102,12 +111,12 @@ const Card = (props) => {
             <p className='content-text'><span className='heavy'>Professor: </span>{professor}</p>
             <p className='heavy content-text'>Timeslots</p>
             {timeslots.map((timeslot, index) => (
-              <Timeslot
-                key={`timeslot-${index}`}
-                day={day_name[timeslot.day]}
-                time={`${timeslot.start}-${timeslot.end}`}
-                room={timeslot.loc}
-              />
+              <div className='timeslot' key={`timeslot-${index}`}>
+                <p className='day'>{day_name[timeslot.day]}</p>
+                <p className='time'>{`${timeslot.start} - ${timeslot.end}`}</p>
+                <p className='room'>{timeslot.loc}</p>
+                <img className='del' src={del_img} alt='material-symbols_edit-outline' onClick={() => deleteTimeslot(index)}/>
+              </div>
             ))}
           </div>
           <div className='btns'>
