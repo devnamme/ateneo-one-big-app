@@ -10,6 +10,7 @@ import {
   addDoc,
   setDoc,
   updateDoc,
+  deleteDoc,
   onSnapshot,
 } from 'firebase/firestore'
 import edit_img from './img/material-symbols_edit-outline.svg';
@@ -37,20 +38,14 @@ const Card = (props) => {
     if (!user || !user.uid) return
 
     onSnapshot(doc(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id), (snapshot) => {
-      const data = snapshot.data()
-      setCode(data.code)
-      setColor(data.color)
-      setProfessor(data.professor)
-      setTimeslots(data.timeslots)
+      if (snapshot.exists()) {
+        const data = snapshot.data()
+        setCode(data.code)
+        setColor(data.color)
+        setProfessor(data.professor)
+        setTimeslots(data.timeslots)
+      }
     })
-
-    // onSnapshot(collection(Auth.db, 'users', user.uid, 'schedules', props.schedule_id, 'classes', props.class_id, 'timeslots'), (snapshot) => {
-    //   let temp_timeslots = []
-    //   snapshot.docs.forEach((doc) => {
-    //     temp_timeslots.push({ ...doc.data(), timeslot_id: doc.id })
-    //   })
-    //   // setTimeslots(temp_timeslots)
-    // })
   }, [user])
 
   const handleColorClick = (newColor) => {
@@ -76,10 +71,6 @@ const Card = (props) => {
     setTimeslots([...temp])
   }
 
-  const deleteCard = () => {
-    console.log('deleted!');
-  }
-
   const pasteAISIS = () => {
     console.log("btnclicked!");
   }
@@ -89,7 +80,7 @@ const Card = (props) => {
       <div className='card-header'>
         <h4 className='label'>{code}</h4>
         <div className={`card-image ${isToggled ? '' : 'hidden'}`} id='delete'>
-          <img src={del_img} alt='material-symbols_edit-outline' onClick={deleteCard} />
+          <img src={del_img} alt='material-symbols_edit-outline' onClick={() => props.onDelete()} />
         </div>
         <div className='card-image' id='edit'>
           <img src={edit_img} alt='material-symbols_edit-outline' onClick={toggle}/>

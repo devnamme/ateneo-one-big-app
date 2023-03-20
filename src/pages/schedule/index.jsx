@@ -12,7 +12,9 @@ import * as Auth from './../../context/Auth'
 import {
   collection,
   doc,
+  addDoc,
   setDoc,
+  deleteDoc,
   updateDoc,
   onSnapshot,
 } from 'firebase/firestore'
@@ -38,6 +40,28 @@ function SchedulePage() {
   const [schedule, setSchedule] = useState({})
   const [classes, setClasses] = useState([])
 
+  const onAddClass = () => {
+    addDoc(collection(Auth.db, 'users', user.uid, 'schedules', schedule_id, 'classes'), {
+      code: `TBA-${classes.length}`,
+      color: 'lavender',
+      professor: 'TBA',
+      timeslots: [{
+        day: 1,
+        loc: 'TBA',
+        start: 0,
+        end: 0,
+      }],
+    })
+  }
+
+  const onPasteFromAISIS = () => {
+    console.log('paste from aisis')
+  }
+
+  const deleteClass = (id) => {
+    deleteDoc(doc(Auth.db, 'users', user.uid, 'schedules', schedule_id, 'classes', id))
+  }
+
   useEffect(() => {
     if (!user || !user.uid) return
 
@@ -53,7 +77,7 @@ function SchedulePage() {
       snapshot.docs.forEach((doc) => {
         temp_classes.push({ ...doc.data(), class_id: doc.id })
       })
-      setClasses(temp_classes)
+      setClasses([...temp_classes])
     })
   }, [user])
 
@@ -70,15 +94,15 @@ function SchedulePage() {
         </div>
 
         <div className="schedule-content">
-          <IconTextButton text="Add Class" icon="add" width="400" />
-          <IconTextButton text="Paste from AISIS" icon="clipboard" width="400" />
+          <IconTextButton text="Add Class" icon="add" width="400" onclick={onAddClass} />
+          <IconTextButton text="Paste from AISIS" icon="clipboard" width="400" onclick={onPasteFromAISIS} />
 
           {classes.map((c, i) =>
             <ClassCard
-              key={'class-' + i}
+              key={`class-${c.class_id}`}
               schedule_id={schedule_id}
               class_id={c.class_id}
-              timeslots={[]}
+              onDelete={() => deleteClass(c.class_id)}
             />
           )}
         </div>
