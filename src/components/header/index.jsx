@@ -68,7 +68,7 @@ function Header() {
                 <button className="lastbutton">About</button>
             </Link>
             <div className="profile-container" onClick={onProfileClick}>
-                <img src={user.photoURL} alt="Profile" />
+                <img id ="desktop-img" src={user.photoURL} alt="Profile" />
             </div>
         </div>
     </div>

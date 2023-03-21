@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
 
-header{
-    width: 100%;
+.header{
+    width: 100vw;
     background-color: #ffffff;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.2);
 }
   
-header .main-wrapper {
-    height: 56px;
+.header .main-wrapper {
+    height: 8vh;
     padding: 0px;
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,7 @@ header .main-wrapper {
 .logo-container {
     display: flex;
     align-items: center;
+    margin: 0;
   }
   
 .logo-container img {
@@ -31,11 +32,9 @@ header .main-wrapper {
 .logo-container h1 {
     font-family: 'Viga';
     font-style: normal;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 400;
-    line-height: 43px;
-    width: 189px;
-    height: 43px;
+    line-height: 1;
     text-decoration: none;
     margin: 0;
 }
@@ -50,16 +49,17 @@ header .main-wrapper {
 .button-container {
     display: flex;
     align-items: center;
+    width: auto;
 }
 
 .button-container button {
-    margin-left: 32px;
-    margin-right: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     border: none;
     background-color: #ffffff;
     color: #080606;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     line-height: 22px;
     cursor: pointer;
@@ -137,7 +137,7 @@ header .main-wrapper {
     align-items: center;
 }
   
-.profile-container img {
+.profile-container #desktop-img {
     width: 36px;
     height: 36px;
     border-radius: 50%;

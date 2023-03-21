@@ -40,8 +40,8 @@ function MobileHeader() {
       {menuOpen && (
         <div className="mobile-menu-container">
           <div className='image-data-container'>
-            <div className="profile-container" onClick={onProfileClick}>
-                <img src={user.photoURL} alt="Profile" />
+            <div className="mobile-profile-container" onClick={onProfileClick}>
+                <img id="mobile-img" src={user.photoURL} alt="Profile" />
                 <h4 className='profile-data'>{user.displayName}</h4>
             </div>
           </div>
