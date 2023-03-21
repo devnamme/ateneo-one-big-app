@@ -160,14 +160,14 @@ function AboutPage() {
                       <img src='/git_logo.svg' alt='Git' className='logo' />
                     </a>
                   </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </>
-
+    
 
   )
 }
