@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
 
-header{
+.mobile-header{
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.2);
 }
   
-header .mobile-main-wrapper {
+.mobile-header .mobile-main-wrapper {
     padding: 12px 0px;
     display: flex;  
     align-items: center;
@@ -15,7 +15,7 @@ header .mobile-main-wrapper {
 
 
 
-header .mobile-main-wrapper > *:nth-child(2) {
+.mobile-header .mobile-main-wrapper > *:nth-child(2) {
     margin-left: auto;
     transform: translateX(-45px);
     margin-right: auto;
@@ -29,13 +29,13 @@ header .mobile-main-wrapper > *:nth-child(2) {
 #logo {
     width: 30px;
     height: 31px;
-    margin-left: 44px;
 }
 
 .hamburger{
     width: 26px;
     height: 26px;
     margin-left: 24px;
+    margin-right: 44px;
 }
   
 .mobile-logo-container h4 {
@@ -58,7 +58,11 @@ header .mobile-main-wrapper > *:nth-child(2) {
     flex-direction: row;
 }
 
-.profile-container img {
+
+.mobile-profile-container {
+    display: flex;
+}
+.mobile-profile-container #mobile-img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -68,8 +72,9 @@ header .mobile-main-wrapper > *:nth-child(2) {
 }
 
 .profile-data{
-    padding-top: 53px;
-    font-size: 24px;
+    padding-top: 55px;
+    padding-left: 30px;
+    font-size: 30px;
     width: 70px;
     font-family: 'Viga';
     color: #FFFFFF;
