@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import {
   collection,
   doc,
+  addDoc,
   setDoc,
   updateDoc,
   onSnapshot,
@@ -29,6 +30,14 @@ function SchedulesPage() {
     })
   }
 
+  function createNewSchedule() {
+    addDoc(collection(Auth.db, 'users', user.uid, 'schedules'), {
+      name: `My Schedule-${schedules.length}`,
+      sem: 1,
+      sy: (new Date()).getFullYear(),
+    })
+  }
+
   useEffect(() => {
     if (!user || !user.uid) return
 
@@ -36,7 +45,7 @@ function SchedulesPage() {
       if (!snapshot.exists())
         createUserSchedules()
       else {
-        console.log('new snapshot at', Date.now())
+        // console.log('new snapshot at', Date.now())
 
         const data = snapshot.data()
         setActiveSched(data.active_schedule)
@@ -60,7 +69,7 @@ function SchedulesPage() {
   return (
     <div id="schedules-container" className="main-wrapper">
       <div className="schedules-content">
-        <IconTextButton text="Add New Schedule" icon="add" />
+        <IconTextButton text="Add New Schedule" icon="add" onclick={() => createNewSchedule()}/>
         <Link to="/schedule/enlistment">
           <IconTextButton text="Enlistment Scheduler" icon="schedule"/>
         </Link>
