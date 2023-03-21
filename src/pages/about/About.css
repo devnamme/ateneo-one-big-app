@@ -1,0 +1,449 @@
+/* --- Creator Container --- */
+
+#creator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    gap: 93px;
+    left: 146px;
+    top: 70px;
+    width: 100vw;
+}
+
+h2 {
+    font-family: 'Viga', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    color: #003A6C;
+    margin: 0;
+}
+
+/* --- OBA --- */
+
+.OBA {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 204px;
+}
+
+.OBA-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 23px;
+    width: 704px;
+}
+
+.OBA h2 {
+    margin-right: auto;
+}
+
+.OBA .OBALogo.desktop {
+    width: 232px;
+    height: 232px;
+}
+
+.OBA .OBALogo.mobile {
+    display: none;
+}
+
+.OBA p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    width: 706px;
+}
+
+/* --- Ateneo --- */
+
+.Ateneo {
+    width: 1160px;
+    position: relative;
+    margin-top: 70px;
+}
+
+.Ateneo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 23px;
+    width: 1159px;
+}
+
+.Ateneo blockquote {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    width: 1088px;
+    margin: 0;
+}
+
+.Ateneo p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    width: 706px;
+}
+
+.Ateneo-body-pic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    width: 1159px;
+}
+
+.Ateneo body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    width: 626px;
+}
+
+.Ateneo .AteneoPic.desktop {
+    width: 443px;
+    height: 253px;
+    filter: drop-shadow(2px 3px 9px rgba(0, 0, 0, 0.25));
+}
+
+.Ateneo .AteneoPic.mobile {
+    display: none;
+}
+
+/* --- Our Team --- */
+.Team {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 81px;
+
+
+}
+
+.Team-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 44px;
+}
+
+.Team-three {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 1152px;
+}
+
+.Team-two {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 783.44px;
+}
+
+.Team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 21px 35px;
+    gap: 14px;
+    height: 454.81px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.Team-card:hover {
+    transition: all 0.3s ease 0.3s;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.Team-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 213.02px;
+}
+
+.Team-card-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 101.8px;
+}
+
+.Team-card-links a {
+    width: 26px;
+    left: 0px;
+    top: 0px;
+    position: relative;
+}
+
+.Team-card-links .logo {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: -1px;
+    left: -1.2px;
+}
+
+.Team-card-links .altlogo {
+    width: 24x;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    left: -0.1px;
+}
+
+.Team-card-links .logo:hover {
+    opacity: 0%;
+    transition: all 0.1s ease 0.1s;
+}
+
+.Team name {
+
+    width: 213.02px;
+    left: 36.31px;
+    top: 308.78px;
+
+    /* Desktop/Body/Large/Bold */
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #000000;
+}
+
+.Team position {
+    width: 72.62px;
+    left: 36.31px;
+    top: 346.31px;
+
+    /* Desktop/Body/XXS/Regular */
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+
+    /* Black */
+
+    color: #000000;
+}
+
+.Team-card .profile-pic {
+    width: 308.01px;
+    height: 306px;
+
+    background: url(IMG_1201.jpg);
+    border-radius: 10px;
+}
+
+@media (max-width: 360px) {
+    #creator-container {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+    }
+
+    .OBA {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+        width: 100vw;
+
+    }
+
+    h2 {
+        font-family: 'Viga';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        color: #003A6C;
+        margin: auto;
+
+    }
+
+    .OBA .OBALogo.mobile {
+        width: 169px;
+        height: 169px;
+        display: block;
+    }
+
+    .OBA .OBALogo.desktop {
+        display: none;
+    }
+
+    .OBA p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+        width: 274px;
+    }
+
+    .OBA-text {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        width: 100vw;
+
+        /* Black */
+
+        color: #000000;
+
+    }
+
+    .Ateneo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+        position: relative;
+        margin-top: 0px;
+        width: 100vw;
+    }
+
+    .Ateneo-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+        width: 100vw;
+    }
+
+    .Ateneo .AteneoPic.desktop {
+        display: none;
+    }
+
+    .Ateneo .AteneoPic.mobile {
+        display: block;
+        width: 262px;
+        height: 150px;
+    }
+
+    .Ateneo-body-pic {
+        flex-direction: column;
+    }
+
+    .Ateneo p {
+        width: 274px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    }
+
+    .Ateneo blockquote {
+        width: 260px;
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .Team {
+        gap: 27px;
+
+    }
+
+    .Team-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .Team-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 0px;
+        gap: 14px;
+        height: 437px;
+
+    }
+
+    .Team-card .profile-pic {
+        width: 285px;
+        height: 285px;
+        border-radius: 10px;
+    }
+
+    .Team-card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 2px;
+        width: 185.89px;
+    }
+
+    .Team-three {
+        display: contents;
+    }
+
+    .Team-two {
+        display: contents;
+    }
+
+
+}
