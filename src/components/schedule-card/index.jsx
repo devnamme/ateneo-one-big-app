@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { Link } from 'react-router-dom'
 
 import React from 'react';
@@ -12,12 +10,8 @@ const sem_name = [
 ]
 
 const ScheduleCard = (props) => {
-  const editable = () =>{
-    alert('Edit button clicked.');
-  }
-
   return (
-    <button className={props.active ? "schedule-button active" : "schedule-button"}>
+    <button className={props.active ? "schedule-button active" : "schedule-button"} onClick={props.onclick}>
       <div className="schedule-text">
         <div className="schedule-name">
           <h4>{props.schedule.name}</h4>
@@ -27,7 +21,7 @@ const ScheduleCard = (props) => {
         </div>
       </div>
       <Link className="edit-icon" to={`/schedule/${props.schedule.id}`}>
-        <img class="edit" src="/src/assets/icons/edit.svg"/>
+        <img className="edit" src="/src/assets/icons/edit.svg"/>
       </Link>
     </button>
   )

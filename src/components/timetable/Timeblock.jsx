@@ -4,14 +4,14 @@ import './Timetable.css';
 const Timeblock = (props) => {
    
     return (
-        <div class={`timeblock ${props.color} _${props.duration} _${props.startTime}`}>
-            <p class='start-time'>{props.startTime}</p>
-            <div class='class-info'>
+        <div className={`timeblock ${props.color} _${props.duration} _${props.startTime}`}>
+            <p className='start-time'>{props.startTime}</p>
+            <div className='class-info'>
                 <p>{props.subject}</p>
                 <p>{props.teacher}</p>
                 <p>{props.classroom}</p>
             </div>
-            <p class='end-time'>{props.endTime}</p>
+            <p className='end-time'>{props.endTime}</p>
         </div>
     );
 };
