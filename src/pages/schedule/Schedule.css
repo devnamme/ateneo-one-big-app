@@ -67,3 +67,39 @@
 .schedule-content > * {
   margin: 0 0 24px;
 }
+
+@media screen and (max-width: 1200px) {
+  #creator-container,
+  #schedules-container {
+    padding: 80px 64px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #creator-container,
+  #schedules-container {
+    padding: 80px 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #creator-container,
+  #schedules-container {
+    padding: 72px 32px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 48px;
+  }
+
+  #creator-container .timetable,
+  #schedules-container .timetable {
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #creator-container,
+  #schedules-container {
+    padding: 72px 24px;
+  }
+}

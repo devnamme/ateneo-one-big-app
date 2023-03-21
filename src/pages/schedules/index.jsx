@@ -56,10 +56,10 @@ function SchedulesPage() {
     updateDoc(doc(Auth.db, 'users', user.uid), { 'active_schedule': sched_num })
       .catch((err) => console.log(err))
   }
-  
+
   return (
-    <div id="schedules-wrapper">
-      <div id="schedules-container">
+    <div id="schedules-container">
+      <div className="main-wrapper">
         <div className="schedules-content">
           <IconTextButton text="Add New Schedule" icon="add" />
           <Link to="/schedule/enlistment">
