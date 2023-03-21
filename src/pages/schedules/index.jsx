@@ -58,26 +58,24 @@ function SchedulesPage() {
   }
 
   return (
-    <div id="schedules-container">
-      <div className="main-wrapper">
-        <div className="schedules-content">
-          <IconTextButton text="Add New Schedule" icon="add" />
-          <Link to="/schedule/enlistment">
-            <IconTextButton text="Enlistment Scheduler" icon="schedule"/>
-          </Link>
+    <div id="schedules-container" className="main-wrapper">
+      <div className="schedules-content">
+        <IconTextButton text="Add New Schedule" icon="add" />
+        <Link to="/schedule/enlistment">
+          <IconTextButton text="Enlistment Scheduler" icon="schedule"/>
+        </Link>
 
-          {schedules.map((schedule, i) =>
-            <ScheduleCard
-              key={'schedule-' + i}
-              schedule={schedule}
-              active={activeSched == i}
-              onclick={() => local_setActiveSched(i)}
-            />
-          )}
-        </div>
-
-        <Timetable />
+        {schedules.map((schedule, i) =>
+          <ScheduleCard
+            key={'schedule-' + i}
+            schedule={schedule}
+            active={activeSched == i}
+            onclick={() => local_setActiveSched(i)}
+          />
+        )}
       </div>
+
+      <Timetable />
     </div>
   )
 }

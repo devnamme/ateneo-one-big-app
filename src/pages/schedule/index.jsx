@@ -85,8 +85,8 @@ function SchedulePage() {
     return (<Navigate to='/error' />)
 
   return (
-    <div className="main-wrapper" id="creator-container">
-      <div className="creator-content">
+    <div id="schedule-creator-container" className="main-wrapper">
+      <div className="schedules-content">
         <div id="creator-text">
           <Link id="return" to="/schedules">Back to all schedules</Link>
           <h3 id="schedule-name">{schedule.name ? schedule.name : ''}</h3>
