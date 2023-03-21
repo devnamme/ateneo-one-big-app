@@ -4,6 +4,12 @@
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+    right: 0;
 }
   
 .mobile-header .mobile-main-wrapper {
@@ -36,6 +42,7 @@
     height: 26px;
     margin-left: 24px;
     margin-right: 44px;
+    cursor: pointer;
 }
   
 .mobile-logo-container h4 {
@@ -93,8 +100,13 @@
 .menu-item-container{
     display: flex;
     flex-direction: row;
+    column-gap: 16px;
     margin-left: 37px;
-    margin-top: 30px;
+    margin-top: 8px;
+}
+
+.menu-item-container .arrow {
+  cursor: pointer;
 }
 
 .item-text{
@@ -124,9 +136,8 @@
     color: #FFFFFF;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px;
     font-size: 16px;
-    padding: 10px;
+    padding: 6px;
 }
 
 .log-out{
@@ -138,6 +149,7 @@
     padding-right: 34px;
     padding-top: 23px;
     padding-bottom: 29px;
+    cursor: pointer;
 }
 
 #logout-text{

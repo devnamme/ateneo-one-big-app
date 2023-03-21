@@ -40,7 +40,7 @@ function MobileHeader() {
       {menuOpen && (
         <div className="mobile-menu-container">
           <div className='image-data-container'>
-            <div className="mobile-profile-container" onClick={onProfileClick}>
+            <div className="mobile-profile-container">
                 <img id="mobile-img" src={user.photoURL} alt="Profile" />
                 <h4 className='profile-data'>{user.displayName}</h4>
             </div>
@@ -102,7 +102,7 @@ function MobileHeader() {
                     >LS Directory</a>
               </div>
             )}
-              <div className='log-out'>
+              <div className='log-out' onClick={onProfileClick}>
                 <img src='logout.svg' alt='logout' />
                 <p id='logout-text'>Log Out</p>
               </div>
