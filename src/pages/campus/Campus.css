@@ -12,9 +12,14 @@
     top: 20%;
 }
 
+.campus-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 h1{
     font-family: 'Viga';
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 400;
 }
 h2{

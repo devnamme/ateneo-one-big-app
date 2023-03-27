@@ -10,7 +10,7 @@ function CampusPage() {
   return (
     <>
       <div className='campus-map-wrapper'>
-        <div className="campus-header">
+        <div className="campus-text">
           <h1>Campus Map</h1>
           <h2>Ateneo de Manila University</h2>
           <h3>I am at...</h3>
@@ -44,8 +44,8 @@ function CampusPage() {
             <option value="Jesuit Hall">Covered Courts</option>
           </select>
           <h3>I want to go to...</h3>
-          <input type="text" id="my-select" list="my-options" placeholder="Select destination" />
-            <datalist id="my-options">
+          <input type="text" id="destination-select" list="locations" placeholder="Select destination" />
+          <datalist id="locations">
             <option value="SEC A"></option>
             <option value="SEC B"></option>
             <option value="SEC C"></option>
@@ -73,7 +73,7 @@ function CampusPage() {
             <option value="ISO Canteen"></option>
             <option value="Church of Gesu"></option>
             <option value="Covered Courts"></option>
-            </datalist>
+          </datalist>
         </div>
         <Map origin={origin} destination={destination} />
       </div>
