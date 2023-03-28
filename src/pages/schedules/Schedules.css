@@ -21,17 +21,33 @@
 }
 
 @media screen and (max-width: 992px) {
+  #schedules-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 48px;
+  }
   
-}
-
-@media screen and (max-width: 768px) {
   .schedules-content {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
   }
+  
+  .timetable{
+    height: 444px;
+  }
+}
+
+@media screen and (max-width: 768px) {
 }
 
 @media screen and (max-width: 576px) {
-  
+  .timetable{
+    width: 308px;
+  }
+
+  .schedules-content button{
+    max-width: 308px;
+  }
 }
