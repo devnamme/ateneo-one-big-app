@@ -23,7 +23,7 @@ function AboutPage() {
         </div>
         <div className="Ateneo">
           <div className="Ateneo-text">
-            <h2>About Ateneo de Manila</h2>
+            <h2><span id="about-text">About</span> Ateneo de Manila</h2>
             <img src="/about_ateneo.svg" alt="Ateneo" className="AteneoPic mobile" />
             <blockquote>
               “To understand the soul of Ateneo de Manila University -- what shaped
@@ -36,7 +36,10 @@ function AboutPage() {
                 From the letter of St. Paul to the Ephesians (5:8), these words
                 capture the spirit of a way of life which Ateneo holds up to her
                 sons and daughters as their best contribution to the work by which
-                God transforms the world. To be "light in the Lord" in all fullness
+                God transforms the world. 
+                <br></br>
+                <br></br>
+                To be "light in the Lord" in all fullness
                 demands moving insistently and deliberately towards God as the
                 center of a person's life, identifying the issues that such a
                 centering poses, and then moving out to the world to find ever new
@@ -50,7 +53,6 @@ function AboutPage() {
         <div className="Team">
           <h2>About the Team</h2>
           <div className="Team-cards">
-            <div className="Team-three">
               <div className="Team-card">
                 <img src='/profile_emman.svg' alt='ProfilePic' className='profile-pic' />
                 <div className="Team-card-text">
@@ -122,9 +124,7 @@ function AboutPage() {
                     </a>
                   </div>
                 </div>
-              </div>
             </div>
-            <div className="Team-two">
               <div className="Team-card">
                 <img src='/profile_angelo.svg' alt='ProfilePic' className='profile-pic' />
                 <div className="Team-card-text">
@@ -160,7 +160,6 @@ function AboutPage() {
                       <img src='/git_logo.svg' alt='Git' className='logo' />
                     </a>
                   </div>
-              </div>
             </div>
           </div>
         </div>

@@ -6,9 +6,6 @@
     align-items: center;
     padding: 70px;
     gap: 93px;
-    left: 146px;
-    top: 70px;
-    width: 100%;
 }
 
 h2 {
@@ -27,21 +24,20 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0;
-    gap: 204px;
+    padding-top: 70px;
 }
 
 .OBA-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    gap: 23px;
-    width: 704px;
+    padding-right: 203px;
+
 }
 
 .OBA h2 {
     margin-right: auto;
+    padding-bottom: 23px;
 }
 
 .OBA .OBALogo.desktop {
@@ -60,13 +56,11 @@ h2 {
     font-size: 16px;
     line-height: 22px;
     color: #000000;
-    width: 706px;
 }
 
 /* --- Ateneo --- */
 
 .Ateneo {
-    width: 1160px;
     position: relative;
     margin-top: 70px;
 }
@@ -75,11 +69,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
-    gap: 23px;
-    width: 1159px;
 }
 
+.Ateneo-text h2{
+    padding-bottom: 23px;
+}
 .Ateneo blockquote {
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
@@ -88,8 +82,7 @@ h2 {
     line-height: 25px;
     text-align: center;
     color: #000000;
-    width: 1088px;
-    margin: 0;
+    padding-bottom: 23px;
 }
 
 .Ateneo p {
@@ -99,7 +92,7 @@ h2 {
     font-size: 16px;
     line-height: 22px;
     color: #000000;
-    width: 706px;
+    padding-right: 165px;
 }
 
 .Ateneo-body-pic {
@@ -107,23 +100,10 @@ h2 {
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    gap: 70px;
-    width: 1159px;
 }
 
-.Ateneo body {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #000000;
-    width: 626px;
-}
 
 .Ateneo .AteneoPic.desktop {
-    width: 443px;
-    height: 253px;
     filter: drop-shadow(2px 3px 9px rgba(0, 0, 0, 0.25));
 }
 
@@ -136,38 +116,17 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
-    gap: 81px;
-
 
 }
 
 .Team-cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding: 0px;
     gap: 44px;
-}
-
-.Team-three {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-
-    width: 1152px;
-}
-
-.Team-two {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 10px;
-
-    width: 783.44px;
 }
 
 .Team-card {
@@ -276,14 +235,13 @@ h2 {
     border-radius: 10px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 940px) {
     #creator-container {
-        margin-top: 45px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0px;
+        padding: 70px;
         gap: 27px;
     }
 
@@ -296,10 +254,16 @@ h2 {
         padding: 0px;
         gap: 27px;
         width: 100%;
-
     }
 
-    h2 {
+    span{
+        display: none;
+    }
+    .Ateneo p{
+        padding: 0;
+    }
+
+    h2, span {
         font-family: 'Viga';
         font-style: normal;
         font-weight: 400;
@@ -307,6 +271,7 @@ h2 {
         line-height: 43px;
         color: #003A6C;
         margin: auto;
+        text-align: center;
 
     }
 
@@ -324,7 +289,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0px;
+        padding-top: 23px;
         gap: 27px;
         width: 274px;
     }
@@ -336,6 +301,7 @@ h2 {
         font-size: 16px;
         line-height: 22px;
         width: 100%;
+        padding: 0;
 
         /* Black */
 
