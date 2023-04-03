@@ -11,6 +11,10 @@
     column-gap: 48px;
 }
 
+.schedules-content button{
+  width: 500px;
+}
+
 .schedules-content > * {
   margin: 0 0 24px;
   display: block;
@@ -44,10 +48,11 @@
 
 @media screen and (max-width: 576px) {
   .timetable{
-    width: 308px;
+    max-width: 308px;
   }
 
   .schedules-content button{
+    font-size: 20px;
     max-width: 308px;
   }
 }
