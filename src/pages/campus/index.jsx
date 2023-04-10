@@ -8,6 +8,8 @@ import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import haversine from 'haversine-distance';
 
+
+
 function RoutingMachine({ origin, destination }) {
   const map = useMap();
 
@@ -19,16 +21,19 @@ function RoutingMachine({ origin, destination }) {
           L.latLng(destination[0], destination[1]),
         ],
         lineOptions: {
-          styles: [{color: 'blue', opacity: 0, weight: 9}],
-          show: false,
+          styles: [{color: 'blue', opacity: 0, weight: 9},],
         },
+        
         routeWhileDragging: false,
         addWaypoints: false,
         draggableWaypoints: false,
         showAlternatives: false,
         show: false,
+        
       }).addTo(map);
-      map.fitBounds(L.latLngBounds([origin, destination]));
+
+      const bounds = L.latLngBounds([origin, destination]);
+      map.setView(bounds.getCenter(), map.getBoundsZoom(bounds, true));
 
       return () => {
         map.removeControl(routingControl);
