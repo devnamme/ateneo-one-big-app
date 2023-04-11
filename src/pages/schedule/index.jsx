@@ -109,7 +109,7 @@ function SchedulePage() {
         <Button text="Delete Schedule" isFilled={true} size="large" color="#FF2323"/>
       </div>
 
-      <Timetable/>
+      <Timetable classes={classes} />
     </div>
   )
 }

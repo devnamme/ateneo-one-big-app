@@ -1,150 +1,150 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Timeblock from './Timeblock.jsx';
 import './Timetable.css';
 
+const DAYS = ['M', 'T', 'W', 'Th', 'F', 'S'];
+
 const Timetable = (props) => {
 
-    // Dunno if there's a more efficient way of doing this instead of having one array for each day
-    const [timeBlockMonday, addTimeBlockMonday] = useState([]);
-    const [timeBlockTuesday, addTimeBlockTuesday] = useState([]);
-    const [timeBlockWednesday, addTimeBlockWednesday] = useState([]);
-    const [timeBlockThursday, addTimeBlockThursday] = useState([]);
-    const [timeBlockFriday, addTimeBlockFriday] = useState([]);
-    const [timeBlockSaturday, addTimeBlockSaturday] = useState([]);
+    const [minTime, setMinTime] = useState(0);
+    const [maxTime, setMaxTime] = useState(0);
+    const [times, setTimes] = useState([]);
 
+    const [dayGroups, setDayGroups] = useState([
+      {
+        day: 'Su',
+        classes: [],
+      }, {
+        day: 'M',
+        classes: [],
+      }, {
+        day: 'T',
+        classes: [],
+      }, {
+        day: 'W',
+        classes: [],
+      }, {
+        day: 'Th',
+        classes: [],
+      }, {
+        day: 'F',
+        classes: [],
+      }, {
+        day: 'S',
+        classes: [],
+      },
+    ])
 
-    const timeBlockHandler = (event) => {
-        // Test code
-        event.preventDefault();
+    useEffect(() => {
+      // console.log('classes', props.classes)
 
-        if( state.day == 'Monday') {
-            addTimeBlockMonday([...timeBlockMonday, 
-            <Timeblock 
-                subject={state.subject} 
-                teacher={state.teacher}
-                classroom={state.classroom}
-                startTime={state.startTime}
-                endTime={state.endTime}
-                color={state.color}
-                duration={state.duration}/>])
-        }
+      let temp_dg = [
+        {
+          day: 'Su',
+          classes: [],
+        }, {
+          day: 'M',
+          classes: [],
+        }, {
+          day: 'T',
+          classes: [],
+        }, {
+          day: 'W',
+          classes: [],
+        }, {
+          day: 'Th',
+          classes: [],
+        }, {
+          day: 'F',
+          classes: [],
+        }, {
+          day: 'S',
+          classes: [],
+        },
+      ]
+      // { start, end, code, professor, loc}
 
-        if( state.day == 'Tuesday') {
-            addTimeBlockTuesday([...timeBlockTuesday, 
-            <Timeblock 
-                subject={state.subject} 
-                teacher={state.teacher}
-                classroom={state.classroom}
-                startTime={state.startTime}
-                endTime={state.endTime}
-                color={state.color}
-                duration={state.duration}/>])
-        }
+      // add to each day group
+      let nmint = minTime
+      let nmaxt = maxTime
 
-        if( state.day == 'Wednesday') {
-            addTimeBlockWednesday([...timeBlockWednesday, 
-            <Timeblock 
-                subject={state.subject} 
-                teacher={state.teacher}
-                classroom={state.classroom}
-                startTime={state.startTime}
-                endTime={state.endTime}
-                color={state.color}
-                duration={state.duration}/>])
-        }
+      props.classes.forEach(c => {
+        c.timeslots.forEach(t => {
+          if (t.start != 0 && t.end != 0) {
 
-        if( state.day == 'Thursday') {
-            addTimeBlockThursday([...timeBlockThursday, 
-            <Timeblock 
-                subject={state.subject} 
-                teacher={state.teacher}
-                classroom={state.classroom}
-                startTime={state.startTime}
-                endTime={state.endTime}
-                color={state.color}
-                duration={state.duration}/>])
-        }
+          let rawh_s = t.start / 100
+          let rawh_e = t.end / 100
 
-        if( state.day == 'Friday') {
-            addTimeBlockFriday([...timeBlockFriday, 
-            <Timeblock 
-                subject={state.subject} 
-                teacher={state.teacher}
-                classroom={state.classroom}
-                startTime={state.startTime}
-                endTime={state.endTime}
-                color={state.color}
-                duration={state.duration}/>])
-        }
+          let f_s = `${t.start >= 1300 ? Math.floor(rawh_s) - 12 : Math.floor(rawh_s)}:${(t.start % 100).toString().padStart(2, '0')} ${t.start < 1200 ? 'AM' : 'PM'}`
+          let f_e = `${t.end >= 1300 ? Math.floor(rawh_e) - 12 : Math.floor(rawh_e)}:${(t.end % 100).toString().padStart(2, '0')} ${t.end < 1200 ? 'AM' : 'PM'}`
 
-        if( state.day == 'Saturday') {
-            addTimeBlockSaturday([...timeBlockSaturday, 
-            <Timeblock 
-                subject={state.subject} 
-                teacher={state.teacher}
-                classroom={state.classroom}
-                startTime={state.startTime}
-                endTime={state.endTime}
-                color={state.color}
-                duration={state.duration}/>])
-        }
-    }
+          let est_s = Math.floor(rawh_s)
+          let est_e = Math.ceil(rawh_e)
+
+          // console.log(est_s, est_e)
+
+          if (nmint == 0 || est_s < nmint)
+            nmint = est_s
+          if (nmaxt == 0 || est_e > nmaxt)
+            nmaxt = est_e
+
+          temp_dg[t.day].classes.push({
+            color: c.color,
+            start: f_s,
+            end: f_e,
+            code: c.code,
+            professor: c.professor,
+            loc: t.loc,
+            rawh_s: Math.floor(t.start / 100) + ((t.start % 100) / 60),
+            rawh_e: Math.floor(t.end / 100) + ((t.end % 100) / 60),
+          })
+
+          }
+        })
+      })
+
+      if (nmint != minTime) setMinTime(nmint)
+      if (nmaxt != maxTime) setMaxTime(nmaxt)
+
+      if (temp_dg[6].classes.length == 0)
+        temp_dg.splice(6, 1)
+      if (temp_dg[0].classes.length == 0)
+        temp_dg.splice(0, 1)
+
+      setDayGroups(temp_dg);
+    }, [props.classes])
+
+    useEffect(() => {
+      let temp_times = []
+      for (let i = minTime; i < maxTime; i++) 
+        temp_times.push(i)
+
+      setTimes(temp_times)
+    }, [minTime, maxTime])
+
 
     return (
-      <div className='timetable'>
-        <div className='time-column'>
-          <p>6 AM</p>
-          <p>7 AM</p>
-          <p>8 AM</p>
-          <p>9 AM</p>
-          <p>10 AM</p>
-          <p>11 AM</p>
-          <p>12 PM</p>
-          <p>1 PM</p>
-          <p>2 PM</p>
-          <p>3 PM</p>
-          <p>4 PM</p>
-          <p>5 PM</p>
-          <p>6 PM</p>
-          <p>7 PM</p>
-          <p>8 PM</p>
-        </div>
-        <div className='day-column'>
-          <h1>M</h1>
-          <div className='day-schedule'>
-            {timeBlockMonday}
+      <div className="timetable">
+        <div className="time-column">
+          <p></p>
+          <div className="times">
+            { times.map(t =>
+              <p key={`time-${t}`}>
+                {t <= 12 ? t : t - 12} {t <= 12 ? 'AM' : 'PM'}
+              </p>
+            ) }
           </div>
         </div>
-        <div className='day-column'>
-          <h1>T</h1>
-          <div className='day-schedule'>
-            {timeBlockTuesday}
+        { dayGroups.map((dg, i) =>
+          <div key={`day-${dg.day}`}>
+            <p className="day">{dg.day}</p>
+            <div className="blocks">
+              { dg.classes.map(c =>
+                <Timeblock raw_data={c} key={`block-${DAYS[i]}-${c.code}`} minTime={minTime} maxTime={maxTime} />
+              ) }
+            </div>
           </div>
-        </div>
-        <div className='day-column'>
-          <h1>W</h1>
-          <div className='day-schedule'>
-            {timeBlockWednesday}
-          </div>
-        </div>
-        <div className='day-column'>
-          <h1>Th</h1>
-          <div className='day-schedule'>
-            {timeBlockThursday}
-          </div>
-        </div>
-        <div className='day-column'>
-          <h1>F</h1>
-          <div className='day-schedule'>
-            {timeBlockFriday}
-          </div>
-        </div>
-        <div className='day-column'>
-          <h1>S</h1>
-          <div className='day-schedule'>
-            {timeBlockSaturday}
-          </div>
-        </div>
+        ) }
       </div>
     );
 };

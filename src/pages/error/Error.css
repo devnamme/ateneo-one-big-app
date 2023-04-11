@@ -1,0 +1,19 @@
+#error-404-page {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: 100%;
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+#error-404-page h1 {
+  font-size: 64px;
+}
+
+#error-404-page h4 {
+  font-size: 20px;
+}
