@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
+
+.campus-map-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 55px;
+    width: 100vw;
+    position: absolute;
+    top: 20%;
+}
+
+#map-wrapper {
+    height: 500px;
+    overflow: hidden;
+}
+
+.map-container {
+    height: 601px;
+    width: 916px;
+    border-radius: 3%;
+    position: relative;
+}
+
+.campus-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-family: 'Viga';
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+input {
+    height: 66px;
+    width: 345px;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom-color: #0084F7;
+    background-image: url("../../../public/location.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::after {
+    display: none;
+}
+
+input::-ms-expand {
+    display: none;
+}
+
+.button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
