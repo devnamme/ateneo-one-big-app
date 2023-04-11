@@ -13,6 +13,7 @@
     justify-content: space-between;
     overflow: scroll;
     overflow-x: hidden;
+    min-height: 560px;
 }
 
 .timetable::-webkit-scrollbar {
@@ -74,13 +75,15 @@
     justify-content: space-between;
     font-weight: normal;
     width: 100%;
+
+    overflow-y: hidden;
 }
 
 .lavender {
     background: #ACC1FF;
 }
 
-.skyblue {
+.blue {
     background: #C7EEFF;
 }
 

@@ -21,6 +21,7 @@ function SchedulesPage() {
 
   const [activeSched, setActiveSched] = useState(0)
   const [schedules, setSchedules] = useState([])
+  const [classes, setClasses] = useState([])
 
   function createUserSchedules() {
     console.log('creating user schedules...')
@@ -60,6 +61,19 @@ function SchedulesPage() {
     })
   }, [user])
 
+  useEffect(() => {
+    if (schedules.length > 0) {
+      onSnapshot(collection(Auth.db, 'users', user.uid, 'schedules', schedules[activeSched].id, 'classes'), (snapshot) => {
+        let temp_classes = []
+        snapshot.docs.forEach((doc) => {
+          temp_classes.push({ ...doc.data(), class_id: doc.id })
+        })
+        setClasses([...temp_classes])
+        console.log(temp_classes)
+      })
+    }
+  }, [user, schedules, activeSched])
+
   function local_setActiveSched(sched_num) {
     setActiveSched(sched_num)
     updateDoc(doc(Auth.db, 'users', user.uid), { 'active_schedule': sched_num })
@@ -84,7 +98,7 @@ function SchedulesPage() {
         )}
       </div>
 
-      <Timetable />
+      <Timetable classes={classes} />
     </div>
   )
 }
