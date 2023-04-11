@@ -49,7 +49,7 @@ h3 {
     font-style: italic;
 }
 
-input {
+.campus-map-wrapper input {
     height: 66px;
     width: 345px;
     border-top: 1px;
@@ -61,15 +61,15 @@ input {
     background-position: 100% 50%;
 }
 
-input:focus {
+.campus-map-wrapper input:focus {
     outline: none;
 }
 
-input::after {
+.campus-map-wrapper input::after {
     display: none;
 }
 
-input::-ms-expand {
+.campus-map-wrapper input::-ms-expand {
     display: none;
 }
 
