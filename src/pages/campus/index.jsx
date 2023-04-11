@@ -177,7 +177,7 @@ function CampusPage() {
           <pretext>Distance: {distance} meter/s</pretext>
           <pretext>Estimated Time: {duration} minute/s</pretext>
         </div>
-        <MapContainer className="map-container" center={origin} zoom={100} scrollWheelZoom={false}>
+        <MapContainer className="map-container" center={origin} zoom={10} scrollWheelZoom={false}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Marker position={origin}>
             <Popup>
@@ -189,7 +189,6 @@ function CampusPage() {
               Ending Point
             </Popup>
           </Marker>
-          {/* <RoutePolyline origin={origin} destination={destination} /> */}
           <RoutingMachine origin={origin} destination={destination} />
         </MapContainer>
 
