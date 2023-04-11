@@ -25,6 +25,6 @@ with open('./python-web-scrape/output.txt', 'w') as f:
         
         f.write(f'https://www.ateneo.edu{href}\n')
         f.write(f'https://www.ateneo.edu{src}\n')
-        f.write(f'{text}\n\n')
+        f.write(f'{text}\n')
 
 print('Data written to output.txt')
