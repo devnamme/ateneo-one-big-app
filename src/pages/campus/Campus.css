@@ -30,19 +30,19 @@
     gap: 20px;
 }
 
-h1 {
+campusmap {
     font-family: 'Viga';
     font-size: 40px;
     font-weight: 400;
 }
 
-h2 {
+ateneo {
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 400;
 }
 
-h3 {
+pretext {
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 700;

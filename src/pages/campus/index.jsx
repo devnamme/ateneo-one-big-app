@@ -107,9 +107,9 @@ function CampusPage() {
     <>
       <div className='campus-map-wrapper'>
         <div className="campus-text">
-          <h1>Campus Map</h1>
-          <h2>Ateneo de Manila University</h2>
-          <h3>I am at...</h3>
+          <campusmap>Campus Map</campusmap>
+          <ateneo>Ateneo de Manila University</ateneo>
+          <pretext>I am at...</pretext>
           <input type="text" id="location-select" list="locations" placeholder="Select current location" required />
           <datalist id="locations">
             <option value="SEC A"></option>
@@ -140,7 +140,7 @@ function CampusPage() {
             <option value="Church of Gesu"></option>
             <option value="LS Covered Courts"></option>
           </datalist>
-          <h3>I want to go to...</h3>
+          <pretext>I want to go to...</pretext>
           <input type="text" id="destination-select" list="locations" placeholder="Select destination" required />
           <datalist id="locations">
             <option value="SEC A"></option>
@@ -174,8 +174,8 @@ function CampusPage() {
           <div className='button-div'>
             <Button text="Go" isFilled={true} size="regular" color="#0084F7" onClickEvent={handleGoButtonClick} />
           </div>
-          <h2>Distance: {distance} meter/s</h2>
-          <h2>Estimated Time: {duration} minute/s</h2>
+          <pretext>Distance: {distance} meter/s</pretext>
+          <pretext>Estimated Time: {duration} minute/s</pretext>
         </div>
         <MapContainer className="map-container" center={origin} zoom={100} scrollWheelZoom={false}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
