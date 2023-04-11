@@ -41,7 +41,7 @@ function NewsPage() {
     <>
       <div className='news-wrapper'>
         <div className='news-header'>
-          <h1>News</h1>
+          <h2>News</h2>
         </div>
         <div className='article-wrapper'>
           {items.map((item, index) => (
