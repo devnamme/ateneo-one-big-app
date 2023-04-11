@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
+
+.campus-map-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 55px;
+    width: 100vw;
+    position: absolute;
+    top: 20%;
+}
+
+#map-wrapper {
+    height: 500px;
+    overflow: hidden;
+}
+
+.map-container {
+    height: 601px;
+    width: 916px;
+    border-radius: 3%;
+    position: relative;
+}
+
+.campus-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+campusmap {
+    font-family: 'Viga';
+    font-size: 40px;
+    font-weight: 400;
+}
+
+ateneo {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+pretext {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.campus-map-wrapper input {
+    height: 66px;
+    width: 345px;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom-color: #0084F7;
+    background-image: url("../../../public/location.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.campus-map-wrapper input:focus {
+    outline: none;
+}
+
+.campus-map-wrapper input::after {
+    display: none;
+}
+
+.campus-map-wrapper input::-ms-expand {
+    display: none;
+}
+
+.button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,103 @@
+#home-main-wrapper{
+    z-index: -1;
+    position: relative;
+    background-image: url('../../assets/home/home_ateneo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 720px;
+}
+
+#home-main-text-wrapper {
+    position: relative;
+    top: -480px;
+    left: 50%;
+    width: 40%;
+    padding: 32px;
+}
+
+#home-main-text-wrapper h1 {
+    font-family: 'Viga';
+    font-size: 72px;
+}
+
+#home-main-text-wrapper p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+#home-main-text-wrapper a {
+    font-weight: 700;
+    color: #003A6C;
+}
+
+#home-main-text-wrapper a:hover {
+    color: #1f70b7;
+}
+
+#home-features-wrapper {
+    position: relative;
+    top: -170px;
+    padding: 32px 16px;
+}
+
+#home-features-wrapper h2 {
+    font-family: 'Viga';
+    font-size: 36px;
+    text-align: center;
+}
+
+#home-pages-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.home-page-card {
+    position: relative;
+    margin: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 30%;
+    border-radius: 4px;
+    background-color: white;
+    filter: drop-shadow(3px 5px 7px rgba(50, 50, 50, 0.3));
+    transition: 0.25s;
+}
+
+.home-page-card:hover {
+    filter: drop-shadow(3px 5px 10px rgba(22, 22, 22, 0.3));
+}
+.home-page-card img {
+    height: 50%;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+
+}
+.home-page-card-text {
+    padding: 16px;
+}
+
+.home-page-card-text h1 {
+    font-family: 'Viga';
+    font-size: 24px;
+}
+
+.home-page-card-text p {
+    margin: 16px 0;
+}
+
+.home-page-card-text a {
+    font-weight: 700;
+    color: #003A6C;
+}
+
+.home-page-card-text a:hover {
+    color: #1f70b7;
+}
+
+@media screen and (max-width: 768px) {
+    #home-main-text-wrapper h1 {
+        font-size: 36px;
+    }
+}

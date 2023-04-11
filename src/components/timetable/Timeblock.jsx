@@ -2,28 +2,29 @@ import React from 'react';
 import './Timetable.css';
 
 const Timeblock = (props) => {
+
+  function calcTop() {
+    return `${(props.raw_data.rawh_s - props.minTime) / (props.maxTime - props.minTime) * 100}%`
+  }
+
+  function calcBottom() {
+    return `${(props.maxTime - props.raw_data.rawh_e) / (props.maxTime - props.minTime) * 100}%`
+  }
    
     return (
-        <div className={`timeblock ${props.color} _${props.duration} _${props.startTime}`}>
-            <p className='start-time'>{props.startTime}</p>
+        <div
+          className={`timeblock ${props.raw_data.color}`}
+          style={{top: calcTop(), bottom: calcBottom()}}
+        >
+            <p className='start-time'>{props.raw_data.start}</p>
             <div className='class-info'>
-                <p>{props.subject}</p>
-                <p>{props.teacher}</p>
-                <p>{props.classroom}</p>
+                <p>{props.raw_data.code}</p>
+                <p>{props.raw_data.professor}</p>
+                <p>{props.raw_data.loc}</p>
             </div>
-            <p className='end-time'>{props.endTime}</p>
+            <p className='end-time'>{props.raw_data.end}</p>
         </div>
     );
 };
-
-Timeblock.defaultProps = {
-    subject: 'CSCI 42',
-    teacher: 'Jongko',
-    classroom: 'F-204',
-    startTime: '8:00 PM',
-    endTime: '3:30 PM',
-    color: 'lavender',
-    duration: '90'
-}
 
 export default Timeblock;

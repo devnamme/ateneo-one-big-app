@@ -42,8 +42,7 @@ function LoginPage() {
             <h2>One Big App</h2>
             <p id="OBF-email">Please login with your OBF email.</p>
             <p id="disclaimer">One Big App only collects and stores profile information from your Google account, as well as some user-inputted information.</p>
-
-            <GoogleButton onClick={signIn} />
+            <GoogleButton onClick={signIn} id="google-btn"/>
         </div>
       </div>
     </div>
