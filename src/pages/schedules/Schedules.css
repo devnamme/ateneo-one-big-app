@@ -1,37 +1,58 @@
 #schedules-wrapper{
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 #schedules-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 80px 160px;
-    column-gap: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 160px;
+  column-gap: 48px;
+}
+
+.schedules-content button{
+width: 500px;
 }
 
 .schedules-content > * {
-  margin: 0 0 24px;
-  display: block;
+margin: 0 0 24px;
+display: block;
 }
 
 @media screen and (max-width: 1200px) {
-  
+
 }
 
 @media screen and (max-width: 992px) {
-  
+#schedules-container{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  row-gap: 48px;
+}
+
+.schedules-content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.timetable{
+  height: 444px;
+}
 }
 
 @media screen and (max-width: 768px) {
-  .schedules-content {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
 }
 
 @media screen and (max-width: 576px) {
-  
+.timetable{
+  max-width: 308px;
+}
+
+.schedules-content button{
+  font-size: 20px;
+  max-width: 308px;
+}
 }
