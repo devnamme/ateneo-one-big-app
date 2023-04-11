@@ -13,9 +13,9 @@ Reminder on policy on University public announcements (UMCO Memo)
 11 April 2023 MEMO TO: The University community FROM: [Sgd] Maria Teresa D Villanueva Director, University Marketing and Communications Office RE: Reminder on policy on
 https://www.ateneo.edu/document/memorandum/2023/04/11/reminder-policy-university-public-announcements-umco-memo
 https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2021-12/AteneoEagleSlhouette.png?itok=Rwcq0yzs
-Traffic Bulletin:  Dismissal Schedule ï¿½ 11 to 14 April 2023; AJHS Fair 14 and 15 April 2023 (CSMO Memo)
+Traffic Bulletin:  Dismissal Schedule â€“ 11 to 14 April 2023; AJHS Fair 14 and 15 April 2023 (CSMO Memo)
 11 Apr 2023
-11 April 2023 MEMO TO: The University Community FROM: [Sgd] Josephy F. Almosera Director, Campus Safety and Mobility Office RE: Traffic Bulletin: Dismissal Schedule ï¿½
+11 April 2023 MEMO TO: The University Community FROM: [Sgd] Josephy F. Almosera Director, Campus Safety and Mobility Office RE: Traffic Bulletin: Dismissal Schedule â€“
 https://www.ateneo.edu/document/memorandum/2023/04/11/traffic-bulletin-dismissal-schedule-11-14-april-2023-ajhs-fair-14-15
 https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-03/traffic%20bulleting%20%28crosswalk%20by%20gonzaga%29.jpeg?itok=mW0fzQL8
 Holy Week Schedule of Accredited Medical Facilities (OHRMOD Memo)
@@ -23,7 +23,6 @@ Holy Week Schedule of Accredited Medical Facilities (OHRMOD Memo)
 5 April 2023 MEMO TO: Members of the University Health Care Plan FROM: [Sgd] Katherine E Soriano Head, HR Operations Division RE: Holy Week Schedule
 https://www.ateneo.edu/document/memorandum/2023/04/05/holy-week-schedule-accredited-medical-facilities-ohrmod-memo
 https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2021-12/AteneoEagleSlhouette.png?itok=Rwcq0yzs
-<<<<<<< HEAD
 Ateneo de Manila University and Leave a Nest Philippines forge strategic partnership to empower innovation
 05 Apr 2023
 Ateneo de Manila University and Leave a Nest Philippines officially signed a Memorandum of Agreement (MOA) to establish a strategic partnership. The signing took place
@@ -34,11 +33,7 @@ Requests for Reinstatement and/or Extension for Intersession and First Semester 
 5 April 2023 MEMO TO: All Loyola Schools Graduate Students FROM: [Sgd] Marlene M De Leon PhD School Registrar [Sgd] Anne Lan K Candelaria PhD
 https://www.ateneo.edu/document/memorandum/2023/04/05/requests-reinstatement-andor-extension-intersession-first-semester
 https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2021-12/AteneoEagleSlhouette.png?itok=Rwcq0yzs
-<<<<<<< HEAD
-Ateneans win first runner-up in PwCï¿½s Mergers and Acquisitions Challenge 2022
-=======
-Ateneans win first runner-up in PwCï¿½s Mergers and Acquisitions Challenge 2022
->>>>>>> d41d672 (Fixed formatting for web scraper)
+Ateneans win first runner-up in PwCâ€™s Mergers and Acquisitions Challenge 2022
 04 Apr 2023
 A team of students from the John Gokongwei School of Management bagged First Runner Up in the 2022 edition of the PwC Philippines Mergers and
 https://www.ateneo.edu/news/2023/04/04/ateneans-win-first-runner-pwcs-mergers-acquisitions-challenge-2022
@@ -53,34 +48,3 @@ April 2023 Holidays and Holy Week Observance (OVPHR Memo)
 3 April 2023 MEMO TO: All Employees FROM: [Sgd] Maria Victoria T Cortez PhD Vice President for Human Resources RE: April 2023 Holidays and Holy
 https://www.ateneo.edu/document/memorandum/2023/04/03/april-2023-holidays-holy-week-observance-ovphr-memo
 https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2021-12/AteneoEagleSlhouette.png?itok=Rwcq0yzs
-=======
-Holy Week Schedule of Accredited Medical Facilities (OHRMOD Memo)
-https://www.ateneo.edu/news/2023/04/05/ateneo-de-manila-university-leave-nest-philippines-forge-strategic-partnership
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-04/338277766_613905687247968_8136419357158547411_n.jpg?itok=Elo68_9D
-Ateneo de Manila University and Leave a Nest Philippines forge strategic partnership to empower innovation
-https://www.ateneo.edu/document/memorandum/2023/04/05/requests-reinstatement-andor-extension-intersession-first-semester
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2021-12/AteneoEagleSlhouette.png?itok=Rwcq0yzs
-Requests for Reinstatement and/or Extension for Intersession and First Semester of School Year 2023-2024
-https://www.ateneo.edu/news/2023/04/04/ateneans-win-first-runner-pwcs-mergers-acquisitions-challenge-2022
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-04/PwC%20challenge.jpg?itok=cQJsWqFW
-Ateneans win first runner-up in PwC’s Mergers and Acquisitions Challenge 2022
-https://www.ateneo.edu/news/opportunities/2023/04/04/gbseald-opens-application-graduate-degree-program-scholarships
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-04/Scholarship%20Application%20%282%29.png?itok=jWB6cR7T
-GBSEALD opens application for graduate degree program scholarships
-https://www.ateneo.edu/document/memorandum/2023/04/03/april-2023-holidays-holy-week-observance-ovphr-memo
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2021-12/AteneoEagleSlhouette.png?itok=Rwcq0yzs
-April 2023 Holidays and Holy Week Observance (OVPHR Memo)
-https://www.ateneo.edu/news/2023/04/03/ateneo-de-manila-university-receives-another-platinum-award-highest-distinction
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-04/SQ-Award.png?itok=1HX2grCR
-Ateneo de Manila University receives another Platinum Award for Highest Distinction from IPOPHL
-https://www.ateneo.edu/news/2023/04/03/ais-jgsom-sdsn-host-public-plenary-gri-role-academe-mainstreaming-sustainability
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-04/339247723_1395536954577794_3351640935723139697_n_1.jpg?itok=D_oHMnKP
-AIS, JGSOM, SDSN PH host public plenary with GRI on role of academe in mainstreaming sustainability
-https://www.ateneo.edu/news/2023/04/01/ateneo-marketing-varsity-wins-overall-champion-essec-business-school-case
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-04/330042006_898283311430188_1981388164189821934_n.jpg?itok=6Eb-f71W
-Ateneo Marketing Varsity wins Overall Champion at ESSEC Business School Case Competition for Future Leaders 2023
-https://www.ateneo.edu/document/memorandum/2023/03/31/traffic-bulletin-dismissal-schedule-3-5-april-2023-csmo-memo
-https://www.ateneo.edu/sites/default/files/styles/max_650x650/public/2023-03/traffic%20bulleting%20%28crosswalk%20by%20gonzaga%29.jpeg?itok=mW0fzQL8
-Traffic Bulletin: Dismissal Schedule – 3 to 5 April 2023 (CSMO Memo)
-
->>>>>>> 712b3ef0692b2029293045996c620b47ef7608bd

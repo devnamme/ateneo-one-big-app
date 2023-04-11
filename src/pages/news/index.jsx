@@ -10,18 +10,22 @@ function NewsPage() {
       const data = await response.text();
 
       const lines = data.split('\n');
-      const numItems = lines.length / 3;
+      const numItems = lines.length / 5;
       const itemsArray = [];
 
       for (let i = 0; i < numItems; i++) {
-        const url = lines[i * 3];
-        const photoLink = lines[i * 3 + 1];
-        const headline = lines[i * 3 + 2];
+        const headline = lines[i * 5];
+        const date = lines[i * 5 + 1];
+        const text = lines[i * 5 + 2];
+        const url = lines[i * 5 + 3];
+        const photoLink = lines[i * 5 + 4];
 
         const item = {
           url: url,
           photoLink: photoLink,
           headline: headline,
+          text: text,
+          date: date,
         };
 
         itemsArray.push(item);
@@ -35,17 +39,25 @@ function NewsPage() {
 
   return (
     <>
-    <h1>News</h1>
-    <div id="news-page" class='main-wrapper'>
-      {items.map((item, index) => (
-        <div key={index} className='article'>
-          <a href={item.url}>
-            <img src={item.photoLink} alt='photo' className='news-img' />
-            <headline>{item.headline}</headline>
-          </a>
+      <div className='news-wrapper'>
+        <div className='news-header'>
+          <h1>News</h1>
         </div>
-      ))}
-    </div>
+        <div className='article-wrapper'>
+          {items.map((item, index) => (
+            <div key={index} className='article'>
+              <img src={item.photoLink} alt='photo' className='news-img' />
+              <div className='text-wrapper'>
+                <date className='date'>{item.date}</date>
+                <a href={item.url} className='headline'>
+                  {item.headline}
+                </a>
+                <p className='body'>{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   )
 }
