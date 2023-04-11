@@ -1,0 +1,21 @@
+.news-page{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+headline {
+    font-family: 'Viga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+}
+
+.news-img{
+    width: 142.01px;
+    height: 149px;
+    object-fit: cover;
+}
