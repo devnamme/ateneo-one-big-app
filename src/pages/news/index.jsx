@@ -36,9 +36,9 @@ function NewsPage() {
   return (
     <>
     <h1>News</h1>
-    <div className="news-page">
+    <div id="news-page" class='main-wrapper'>
       {items.map((item, index) => (
-        <div key={index}>
+        <div key={index} className='article'>
           <a href={item.url}>
             <img src={item.photoLink} alt='photo' className='news-img' />
             <headline>{item.headline}</headline>
