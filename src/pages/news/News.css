@@ -1,10 +1,10 @@
-.news-page{
+#news-page{
     display: flex;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
+
 headline {
     font-family: 'Viga';
     font-style: normal;
@@ -18,4 +18,11 @@ headline {
     width: 142.01px;
     height: 149px;
     object-fit: cover;
+}
+
+.article{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 523px;
 }
