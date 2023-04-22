@@ -109,3 +109,15 @@ pretext {
     gap: 20px;
     align-items: center;
 }
+
+.campus-map-wrapper input {
+    height: 66px;
+    width: 240px;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom-color: #0084F7;
+    background-image: url("../../../public/location.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
