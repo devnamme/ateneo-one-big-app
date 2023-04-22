@@ -96,8 +96,63 @@
     color: #1f70b7;
 }
 
+@media screen and (max-width: 1440px) {
+    #home-main-text-wrapper {
+        top: -500px;
+        width: 50%;
+    }
+
+    #home-main-text-wrapper h1 {
+        font-family: 'Viga';
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #home-main-text-wrapper {
+        top: -600px;
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    #home-main-wrapper{
+        height: 100vh;
+        max-height: 720px;
+    }
+
+    #home-main-text-wrapper {
+        top: -80vh;
+        width: 50%;
+    }
+
     #home-main-text-wrapper h1 {
         font-size: 36px;
+    }
+
+    .home-page-card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #home-main-wrapper{
+        height: 70vh;
+        max-height: 720px;
+    }
+
+    #home-main-text-wrapper {
+        top: -50vh;
+        left: 0;
+        margin: auto;
+        width: 60%;
+        padding: 32px 0px;
+        color: white;
+    }
+
+    
+    #home-main-text-wrapper a {
+        font-weight: 700;
+        color: white;
     }
 }
