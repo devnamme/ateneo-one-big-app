@@ -83,3 +83,29 @@ pretext {
     height: 100%;
     width: 100%;
 }
+
+@media (max-width: 360px) {
+    .campus-map-wrapper{
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 27px;
+    }
+}
+
+.map-container {
+    height: 360px;
+    width: 360px;
+    border-radius: 3%;
+    position: relative;
+}
+
+.campus-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
