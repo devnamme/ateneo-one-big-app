@@ -71,8 +71,21 @@
     line-height: 22px;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+    .article-wrapper{
+        margin-left: 0;
+        padding: 0 32px;
+    }
     .article {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 576px) {
 }
