@@ -94,7 +94,7 @@ pretext {
         padding: 0px;
         gap: 27px;
     }
-}
+
 
 .map-container {
     height: 360px;
@@ -120,4 +120,5 @@ pretext {
     background-image: url("../../../public/location.png");
     background-repeat: no-repeat;
     background-position: 100% 50%;
+}
 }
